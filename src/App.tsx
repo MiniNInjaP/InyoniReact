@@ -1,4 +1,4 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./Components/NavBar";
 
 const App = () => {
@@ -6,8 +6,9 @@ const App = () => {
     <Grid templateAreas={`"nav" "main" "footer"`}>
       <GridItem area="nav">
         <NavBar></NavBar>
+        <Box height={{ base: "105px", lg: "110px" }}></Box>
       </GridItem>
-      <GridItem area="main" bg="green">
+      <GridItem height="200vh" area="main" bg="green">
         Main
       </GridItem>
       <GridItem area="footer" bg="yellow">
