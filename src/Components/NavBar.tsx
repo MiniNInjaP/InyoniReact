@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <Box width="100%" bg="#fff" position="fixed">
       <IconInfoList></IconInfoList>
-      <HStack justifyContent="space-between" paddingX={10}>
+      <HStack justifyContent="space-between" paddingX={{ base: 2, lg: 10 }}>
         <Logo></Logo>
         <NavigationList></NavigationList>
       </HStack>
