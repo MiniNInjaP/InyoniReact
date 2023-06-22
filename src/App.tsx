@@ -1,20 +1,29 @@
-import { Box, Grid, GridItem } from "@chakra-ui/react";
-import NavBar from "./Components/NavBar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./Pages/Layout";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Services from "./Pages/Services";
+import IndustryAssociates from "./Pages/IndustryAssociates";
+import Projects from "./Pages/Projects";
+import Contact from "./Pages/ContactUs";
 
 const App = () => {
   return (
-    <Grid templateAreas={`"nav" "main" "footer"`}>
-      <GridItem area="nav">
-        <NavBar></NavBar>
-        <Box height={{ base: "105px", lg: "110px" }}></Box>
-      </GridItem>
-      <GridItem height="200vh" area="main" bg="green">
-        Main
-      </GridItem>
-      <GridItem area="footer" bg="yellow">
-        Footer
-      </GridItem>
-    </Grid>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/services" element={<Services />}></Route>
+          <Route
+            path="/industryassociates"
+            element={<IndustryAssociates />}
+          ></Route>
+          <Route path="/projects" element={<Projects />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
