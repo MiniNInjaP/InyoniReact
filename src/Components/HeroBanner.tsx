@@ -3,11 +3,13 @@ import HeroLg from "../assets/Pivot-Image-w_1160.jpg";
 const HeroBanner = () => {
   return (
     <Box
-      backgroundImage={HeroLg}
-      backgroundRepeat={"no-repeat"}
-      backgroundSize={"100vw"}
-      width={"100vw"}
-      minHeight="85vh"
+      overflow={"hidden"}
+      bgImage={HeroLg}
+      bgSize="cover"
+      bgPosition="center"
+      bgRepeat="no-repeat"
+      w="auto"
+      h="100vh"
     >
       <Text
         fontSize={{ base: 10, lg: 35 }}
