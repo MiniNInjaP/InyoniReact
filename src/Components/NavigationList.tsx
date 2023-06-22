@@ -91,7 +91,12 @@ const NavigationList = () => {
         </Menu>
       </Show>
       <Show above="lg">
-        <List fontSize={20} paddingTop={2} display="flex" flex="d-flex">
+        <List
+          fontSize={{ lg: 13, xl: 20 }}
+          paddingTop={2}
+          display="flex"
+          flex="d-flex"
+        >
           {navItems.map((item) => (
             <ListItem
               paddingBottom={10}
@@ -106,11 +111,10 @@ const NavigationList = () => {
             <MenuButton
               as={Button}
               variant="unstyled"
-              marginTop={"27px"}
-              marginX={2}
+              marginTop={{ lg: "22px", xl: "27px" }}
               onMouseEnter={mainMenu.onOpen}
               borderRadius={0}
-              fontSize={20}
+              fontSize={{ lg: 13, xl: 20 }}
               rightIcon={
                 <Icon position={"relative"} top={1}>
                   <ChevronDownIcon />
