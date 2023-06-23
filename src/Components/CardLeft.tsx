@@ -1,13 +1,25 @@
-import { Card, CardBody, Text, Image } from "@chakra-ui/react";
+import { Card, CardBody, Text, Image, Heading, Box } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+
 import Button from "../Components/Button";
-import { ReactElement } from "react";
 
 interface Props {
   image: string;
   color: string;
+  heading: string;
+  paragraph: string;
+  buttonText: string;
+  buttonLink: string;
 }
 
-const CardLeft = ({ image, color }: Props) => {
+const CardLeft = ({
+  image,
+  buttonText,
+  color,
+  heading,
+  paragraph,
+  buttonLink,
+}: Props) => {
   return (
     <Card
       borderRadius={0}
@@ -24,7 +36,19 @@ const CardLeft = ({ image, color }: Props) => {
         maxHeight={"415px"}
         src={image}
       ></Image>
-      <CardBody marginTop={0} paddingY={0} paddingLeft={"10%"}></CardBody>
+      <CardBody marginTop={0} paddingY={0} paddingLeft={"10%"}>
+        <Heading fontSize={30} color={color} marginBottom={3}>
+          {heading}
+        </Heading>
+        <Text fontSize={17} whiteSpace={"pre-wrap"} color={color}>
+          {paragraph}
+        </Text>
+        <Box marginTop={10}>
+          <Link to={buttonLink}>
+            <Button variant="secondary">{buttonText}</Button>
+          </Link>
+        </Box>
+      </CardBody>
     </Card>
   );
 };

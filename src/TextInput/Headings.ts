@@ -1,0 +1,1 @@
+export const TurnKey = "Turn-key irrigation systems for large-scale agricultural applications."
