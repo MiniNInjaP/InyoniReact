@@ -39,29 +39,29 @@
 @media screen and (min-width: 1000px) {
     .hero-text {
         font-size: 30px;
-        top: 350px;
+        top: 330px;
         left: 80px;
     }
 }
 @media screen and (min-width: 1200px) {
     .hero-text {
         font-size: 35px;
-        top: 410px;
+        top: 350px;
         left: 80px;
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1400px) {
     .hero-text {
         font-size: 35px;
-        top: 420px;
+        top: 390px;
         left: 80px;
     }
 }
 @media screen and (min-width: 1600px) {
     .hero-text {
         font-size: 35px;
-        top: 450px;
+        top: 420px;
         left: 80px;
     }
 }
@@ -77,5 +77,12 @@
         font-size: 48px;
         top: 500px;
         left: 80px;
+    }
+}
+@media screen and (min-width: 2500px) {
+    .hero-text {
+        font-size: 60px;
+        top: 680px;
+        left: 100px;
     }
 }
