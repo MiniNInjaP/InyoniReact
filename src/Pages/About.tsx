@@ -1,6 +1,8 @@
 import { Grid, GridItem, Box } from "@chakra-ui/react";
 import NavBar from "../Components/NavBar";
-import Button from "../Components/Button";
+import CardLeft from "../Components/CardLeft";
+import CardRight from "../Components/CardRight";
+import image from "../assets/XinavaneBarge.jpg";
 
 const About = () => {
   return (
@@ -10,9 +12,9 @@ const About = () => {
         <NavBar></NavBar>
         <Box height={{ base: "105px", lg: "130px" }}></Box>
       </GridItem>
-      <GridItem margin={10} height="200vh" area="main">
-        <Button variant="secondary">First Button</Button>
-        <Button variant="primary">First Button</Button>
+      <GridItem height="200vh" area="main">
+        <CardLeft color="white" image={image}></CardLeft>
+        <CardRight color={"white"} image={image}></CardRight>
       </GridItem>
       <GridItem area="footer" bg="yellow">
         Footer

@@ -146,7 +146,7 @@ const NavigationList = () => {
                   onMouseEnter={subMenu.onOpen}
                   onMouseLeave={subMenu.onClose}
                   position={"relative"}
-                  right={"230px"}
+                  right={"150px"}
                   top={"-53px"}
                   borderRadius={0}
                 >
