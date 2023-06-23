@@ -42,6 +42,7 @@ const CardRight = ({
         </Box>
       </CardBody>
       <Image
+        paddingRight={100}
         borderRadius={"5px"}
         overflow={"hidden"}
         maxWidth={"550px"}
