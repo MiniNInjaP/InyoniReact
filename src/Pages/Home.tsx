@@ -1,7 +1,6 @@
 import { GridItem, Box, Grid } from "@chakra-ui/react";
 import NavBar from "../Components/NavBar";
 import HeroBanner from "../Components/HeroBanner";
-import styles from "../Styles/HeroBanner.module.css";
 
 const Home = () => {
   return (

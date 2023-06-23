@@ -10,3 +10,72 @@
 .grid {
     width: calc(100% - 160px);
 }
+
+.hero-text {
+    top: 105px;
+    left: 25px;
+    font-size: 8px;
+}
+@media screen and (min-width: 400px) {
+    .hero-text {
+        font-size: 10px;
+        top: 115px;
+        left: 35px;
+    }
+}
+@media screen and (min-width: 700px) {
+    .hero-text {
+        font-size: 18px;
+        top: 205px;
+        left: 50px;
+    }
+}
+@media screen and (min-width: 700px) {
+    .hero-text {
+        top: 250x;
+        left: 50px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .hero-text {
+        font-size: 30px;
+        top: 350px;
+        left: 80px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .hero-text {
+        font-size: 35px;
+        top: 410px;
+        left: 80px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero-text {
+        font-size: 35px;
+        top: 420px;
+        left: 80px;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .hero-text {
+        font-size: 35px;
+        top: 450px;
+        left: 80px;
+    }
+}
+@media screen and (min-width: 1800px) {
+    .hero-text {
+        font-size: 40px;
+        top: 480px;
+        left: 90px;
+    }
+}
+@media screen and (min-width: 1920px) {
+    .hero-text {
+        font-size: 48px;
+        top: 500px;
+        left: 80px;
+    }
+}
