@@ -23,7 +23,7 @@ const CardLeft = ({
   return (
     <Card
       borderRadius={0}
-      bg={"green"}
+      bg={"#17733A"}
       padding={50}
       display={"flex"}
       justifyContent={"space-between"}

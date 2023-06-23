@@ -2,8 +2,8 @@ import { Grid, GridItem, Box } from "@chakra-ui/react";
 import NavBar from "../Components/NavBar";
 import CardLeft from "../Components/CardLeft";
 import CardRight from "../Components/CardRight";
-import image from "../assets/XinavaneBarge.jpg";
-
+import xinavaneImage from "../assets/XinavaneBarge.jpg";
+import iaSAIcon from "../assets/IA-SA-Icon-Small.jpg";
 import { TurnKeySection, serviceSection } from "../TextInput/TextContent";
 import { TurnKey } from "../TextInput/Headings";
 const About = () => {
@@ -18,7 +18,7 @@ const About = () => {
           paragraph={TurnKeySection}
           heading={TurnKey}
           color="gray"
-          image={image}
+          image={iaSAIcon}
           buttonText="About Us"
           buttonLink="/about"
         ></CardRight>
@@ -26,7 +26,7 @@ const About = () => {
           heading="Services"
           paragraph={serviceSection}
           color={"white"}
-          image={image}
+          image={xinavaneImage}
           buttonText="Services"
           buttonLink="/services"
         ></CardLeft>

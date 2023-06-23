@@ -9,14 +9,13 @@
 .btn::after {
     font-weight: 400;
     position: absolute;
-    left: 90%;
-    top: 25%;
-    right: 5%;
+    left: 85%;
+    top: 24%;
     opacity: 0;
     transition: all 0.5s;
 }
 .btn:hover {
-    padding: 0.5rem 3.5rem 0.5rem 1.5rem;
+    padding: 0.5rem 4rem 0.5rem 1.5rem;
     transition: all 1s;
     border: 0;
 
@@ -38,11 +37,10 @@
 
 .btn-primary:hover {
     background-color: lightgray;
-    box-shadow: 0px 6px 15px #0000ff61;
 }
 .btn-secondary {
     color: #fff;
-    background: green;
+    background: #17733A;
     position: relative;
     border: 2px solid #fff;
 
@@ -50,8 +48,7 @@
 
 .btn-secondary:hover {
     color: #fff;
-    background-color: lightgreen;
-    box-shadow: 0px 6px 15px #0000ff61;
+    background-color: #146834;
 }
 
 .btn-secondary::after {

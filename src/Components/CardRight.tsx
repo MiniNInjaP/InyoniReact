@@ -37,7 +37,7 @@ const CardRight = ({
         </Text>
         <Box marginTop={10}>
           <Link to={buttonLink}>
-            <Button variant="secondary">{buttonText}</Button>
+            <Button variant="primary">{buttonText}</Button>
           </Link>
         </Box>
       </CardBody>
