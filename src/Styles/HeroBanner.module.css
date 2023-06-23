@@ -1,0 +1,12 @@
+.hero-banner {
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    background-image: url("../assets/Pivot-Image-w_1160.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+};
+.grid {
+    width: calc(100% - 160px);
+}

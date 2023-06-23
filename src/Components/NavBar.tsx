@@ -5,7 +5,13 @@ import NavigationList from "./NavigationList";
 
 const NavBar = () => {
   return (
-    <Box width="100vw" height={"105px"} bg="#fff" position="fixed">
+    <Box
+      bgColor="#fff"
+      width="100vw"
+      height={{ base: "105px", lg: "130px" }}
+      bg="#fff"
+      position="fixed"
+    >
       <IconInfoList></IconInfoList>
       <HStack justifyContent="space-between" paddingX={{ base: 2, lg: 10 }}>
         <Logo></Logo>

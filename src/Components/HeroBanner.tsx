@@ -1,24 +1,28 @@
 import { Box, Text } from "@chakra-ui/react";
-import HeroLg from "../assets/Pivot-Image-w_1160.jpg";
+import styles from "../Styles/HeroBanner.module.css";
 const HeroBanner = () => {
   return (
     <Box
-      overflow={"hidden"}
-      bgImage={HeroLg}
-      bgSize="cover"
-      bgPosition="center"
-      bgRepeat="no-repeat"
-      w="auto"
-      h="100vh"
+      height={{ base: "150px", md: "50vh", lg: "80vh" }}
+      className={styles["hero-banner"]}
     >
       <Text
-        fontSize={{ base: 10, lg: 35 }}
-        fontWeight={600}
-        textShadow="5px 2px #2d8043"
-        position="relative"
-        left={50}
-        top="50vh"
+        fontSize={{ base: 8, md: 18, lg: 30 }}
         color={"white"}
+        position={"relative"}
+        top={{
+          base: "110px",
+          md: "205px",
+          lg: "330px",
+          xl: "380px",
+        }}
+        left={{
+          base: "20px",
+          md: "30px",
+          lg: "40px",
+          xl: "80px",
+        }}
+        textShadow={"2px 5px 5px #32a852"}
       >
         More than 40,000ha under irrigation - and growing
       </Text>
