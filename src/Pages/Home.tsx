@@ -46,7 +46,7 @@ const Home = () => {
           imageOne={valeyImage}
           imageTwo={sabiImage}
           buttonText="More Information"
-          buttonLink="/industryAssociates"
+          buttonLink="/industrAssociates"
         ></CardTwoImage>
       </GridItem>
       <GridItem area="footer" bg="yellow">

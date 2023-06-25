@@ -9,7 +9,6 @@ const NavBar = () => {
       bgColor="#fff"
       width="100vw"
       height={{ base: "105px", lg: "130px" }}
-      bg="#fff"
       position="fixed"
     >
       <IconInfoList></IconInfoList>

@@ -104,26 +104,28 @@ const NavigationList = () => {
               paddingX={3}
               key={item.label}
             >
-              <Link to={item.link}>{item.label}</Link>
+              <Link  to={item.link}>{item.label}</Link>
             </ListItem>
           ))}
           <Menu isOpen={mainMenu.isOpen}>
-            <MenuButton
-              as={Button}
-              variant="unstyled"
-              marginTop={{ lg: "22px", xl: "27px" }}
-              onMouseEnter={mainMenu.onOpen}
-              borderRadius={0}
-              fontSize={{ lg: 13, xl: 20 }}
-              rightIcon={
-                <Icon position={"relative"} top={1}>
-                  <ChevronDownIcon />
-                </Icon>
-              }
-              fontWeight="normal"
-            >
-              Partners
-            </MenuButton>
+            <Link to={'/partners'}>
+              <MenuButton
+                as={Button}
+                variant="unstyled"
+                marginTop={{ lg: "22px", xl: "27px" }}
+                onMouseEnter={mainMenu.onOpen}
+                borderRadius={0}
+                fontSize={{ lg: 13, xl: 20 }}
+                rightIcon={
+                  <Icon position={"relative"} top={1}>
+                    <ChevronDownIcon />
+                  </Icon>
+                }
+                fontWeight="normal"
+              >
+                Partners
+              </MenuButton>
+            </Link>
             <MenuList
               position={"relative"}
               top={"22px"}
@@ -137,6 +139,7 @@ const NavigationList = () => {
                     onMouseEnter={subMenu.onOpen}
                     onMouseLeave={subMenu.onClose}
                     as={Link}
+                    target="_blank"
                     to={"https://www.valleyirrigation.com/"}
                   >
                     Valley Irrigation
@@ -152,18 +155,21 @@ const NavigationList = () => {
                 >
                   <MenuItem
                     as={Link}
+                    target="_blank"
                     to={"https://www.valleyirrigation.com/icon10"}
                   >
                     ICON 10
                   </MenuItem>
                   <MenuItem
                     as={Link}
+                    target="_blank"
                     to={"https://www.valleyirrigation.com/icon5"}
                   >
                     ICON 5
                   </MenuItem>
                   <MenuItem
                     as={Link}
+                    target="_blank"
                     to={"https://www.valleyirrigation.com/agsense"}
                   >
                     Agsense Icon Link
@@ -171,7 +177,8 @@ const NavigationList = () => {
                 </MenuList>
                 <MenuDivider></MenuDivider>
               </Menu>
-              <MenuItem as={Link} to={"https://www.netafim.co.za/"}>
+              <MenuItem  target="_blank"
+                 as={Link} to={"https://www.netafim.co.za/"}>
                 Netafim
               </MenuItem>
             </MenuList>
