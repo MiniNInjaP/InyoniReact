@@ -26,7 +26,6 @@ const CardRight = ({
       borderRadius={0}
       bg={"white"}
       paddingY={50}
-      display={"flex"}
       paddingX={90}
       justifyContent={"space-between"}
       flexDir={"row"}

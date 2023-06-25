@@ -7,3 +7,5 @@ Employing the latest in technological advances, along with sound engineering pri
 • Detailed system design and engineering;
 • System supply, installation and construction; and
 • System commissioning and testing`
+
+export const footerText = `info@inyoniafrica.co.za\nTel: +27 13 7122175\nFax: +27 13 7124198\nWeb: www.inyoniafrica.co.za\nPostal: PO Box 125, Barberton, 1300, South Africa\nPhysical Address: 51 President Street, Barberton, 1300, South Africa`

@@ -10,6 +10,7 @@ import iaSAIcon from "../assets/IA-SA-Icon-Small.jpg";
 import valeyImage from '../assets/valley.png'
 import sabiImage from '../assets/Sabi.jpg' 
 import CardTwoImage from "../Components/CardTwoImage";
+import Footer from "../Components/Footer";
 
 
 const Home = () => {
@@ -49,8 +50,8 @@ const Home = () => {
           buttonLink="/industrAssociates"
         ></CardTwoImage>
       </GridItem>
-      <GridItem area="footer" bg="yellow">
-        Footer
+      <GridItem area="footer" bg={'#17733A'}>
+        <Footer></Footer>
       </GridItem>
     </Grid>
   );
