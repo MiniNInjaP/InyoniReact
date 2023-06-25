@@ -7,6 +7,10 @@ import { TurnKey } from "../TextInput/Headings";
 import { TurnKeySection, serviceSection } from "../TextInput/TextContent";
 import xinavaneImage from "../assets/XinavaneBarge.jpg";
 import iaSAIcon from "../assets/IA-SA-Icon-Small.jpg";
+import valeyImage from '../assets/valley.png'
+import sabiImage from '../assets/Sabi.jpg' 
+import CardTwoImage from "../Components/CardTwoImage";
+
 
 const Home = () => {
   return (
@@ -20,7 +24,8 @@ const Home = () => {
         <CardRight
           paragraph={TurnKeySection}
           heading={TurnKey}
-          color="gray"
+          headingColor="#474747"
+          textColor="#6D6D6D"
           image={iaSAIcon}
           buttonText="About Us"
           buttonLink="/about"
@@ -33,6 +38,16 @@ const Home = () => {
           buttonText="Services"
           buttonLink="/services"
         ></CardLeft>
+         <CardTwoImage
+          paragraph={TurnKeySection}
+          heading={TurnKey}
+          headingColor="#474747"
+          textColor="#6D6D6D"
+          imageOne={valeyImage}
+          imageTwo={sabiImage}
+          buttonText="More Information"
+          buttonLink="/industryAssociates"
+        ></CardTwoImage>
       </GridItem>
       <GridItem area="footer" bg="yellow">
         Footer

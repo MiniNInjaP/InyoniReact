@@ -37,10 +37,10 @@ const CardLeft = ({
         src={image}
       ></Image>
       <CardBody marginTop={0} paddingY={0} paddingLeft={"10%"}>
-        <Heading fontSize={30} color={color} marginBottom={3}>
+        <Heading paddingLeft={10} fontSize={30} color={color} marginBottom={3}>
           {heading}
         </Heading>
-        <Text fontSize={17} whiteSpace={"pre-wrap"} color={color}>
+        <Text fontSize={17} fontWeight={100} whiteSpace={"pre-wrap"} color={color}>
           {paragraph}
         </Text>
         <Box marginTop={10}>
