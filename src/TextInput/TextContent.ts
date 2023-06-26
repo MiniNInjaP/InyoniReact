@@ -9,3 +9,6 @@ Employing the latest in technological advances, along with sound engineering pri
 • System commissioning and testing`
 
 export const footerText = `info@inyoniafrica.co.za\nTel: +27 13 7122175\nFax: +27 13 7124198\nWeb: www.inyoniafrica.co.za\nPostal: PO Box 125, Barberton, 1300, South Africa\nPhysical Address: 51 President Street, Barberton, 1300, South Africa`
+
+export const IAAText = `Inyoni Africa is a corporate member of SABI (South African Irrigation Institute / Suid Afrikaanse Besproeiingsinstituut). The Institute strives to provide better irrigation standards and norms in ensuring the optimal use of irrigation water, as a scarce natural resource.
+We are also proud to be agents for Valley Center Pivots. Valley, a member of the Valmont Group, is the world leader in center pivots and related control development.`

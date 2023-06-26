@@ -22,28 +22,38 @@ const CardLeft = ({
 }: Props) => {
   return (
     <Card
+      width={"100vw"}
       borderRadius={0}
       bg={"#17733A"}
       padding={50}
       display={"flex"}
-      justifyContent={{ base: "center", lg: "space-between" }}
-      alignItems={{ base: "center", lg: "space-between" }}
       flexDir={{ base: "column", lg: "row" }}
+      justifyContent={{ base: "center", lg: "space-between" }}
+      alignItems={{ base: "center", lg: "flex-start" }}
     >
       <Image
         borderRadius={"5px"}
         overflow={"hidden"}
-        maxWidth={"550px"}
-        maxHeight={"415px"}
+        width={{ base: "200px", md: "550px" }}
+        height={{ base: "200px", md: "400px" }}
         src={image}
         paddingBottom={10}
       ></Image>
-      <CardBody paddingX={150} marginTop={0} paddingY={0} paddingLeft={"10%"}>
-        <Heading paddingLeft={10} fontSize={30} color={color} marginBottom={3}>
+      <CardBody
+        paddingRight={{ md: 10, lg: 0 }}
+        marginTop={0}
+        paddingY={0}
+        paddingLeft={"10%"}
+      >
+        <Heading
+          fontSize={{ base: 12, md: 20, lg: 30 }}
+          color={color}
+          marginBottom={3}
+        >
           {heading}
         </Heading>
         <Text
-          fontSize={17}
+          fontSize={{ base: 8, md: 15, lg: 17 }}
           fontWeight={100}
           whiteSpace={"pre-wrap"}
           color={color}

@@ -26,7 +26,8 @@ const CardRight = ({
       borderRadius={0}
       bg={"white"}
       paddingY={50}
-      paddingX={90}
+      paddingX={{ base: 0, md: 90 }}
+      width={"100vw"}
       justifyContent={{ base: "center", lg: "space-between" }}
       alignItems={{ base: "center", lg: "space-between" }}
       flexDir={{ base: "column", lg: "row" }}
@@ -35,18 +36,22 @@ const CardRight = ({
         marginTop={0}
         flexWrap={"wrap"}
         paddingY={0}
-        paddingRight={"5%"}
+        marginRight={"10%"}
       >
         <Heading
           paddingLeft={10}
-          fontSize={30}
+          fontSize={{ base: 12, md: 20, lg: 30 }}
           fontWeight={400}
           color={headingColor}
           marginBottom={3}
         >
           {heading}
         </Heading>
-        <Text fontSize={17} whiteSpace={"pre-wrap"} color={textColor}>
+        <Text
+          fontSize={{ base: 8, md: 15, lg: 17 }}
+          whiteSpace={"pre-wrap"}
+          color={textColor}
+        >
           {paragraph}
         </Text>
         <Box marginTop={10}>
@@ -57,12 +62,12 @@ const CardRight = ({
       </CardBody>
       <Image
         paddingTop={10}
-        paddingRight={200}
+        paddingRight={{ base: 0, lg: 200 }}
         borderRadius={"5px"}
         overflow={"hidden"}
         maxWidth={"550px"}
-        maxHeight={"415px"}
-        src={image}
+        maxHeight={"400px"}
+        srcSet={image}
       ></Image>
     </Card>
   );

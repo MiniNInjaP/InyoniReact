@@ -3,15 +3,18 @@ import NavBar from "../Components/NavBar";
 import HeroBanner from "../Components/HeroBanner";
 import CardLeft from "../Components/CardLeft";
 import CardRight from "../Components/CardRight";
-import { TurnKey } from "../TextInput/Headings";
-import { TurnKeySection, serviceSection } from "../TextInput/TextContent";
-import xinavaneImage from "../assets/XinavaneBarge.jpg";
+import { TurnKey, IAA } from "../TextInput/Headings";
+import {
+  TurnKeySection,
+  serviceSection,
+  IAAText,
+} from "../TextInput/TextContent";
 import iaSAIcon from "../assets/IA-SA-Icon-Small.jpg";
-import valeyImage from '../assets/valley.png'
-import sabiImage from '../assets/Sabi.jpg' 
+import xinavaneImage from "../assets/XinavaneBarge.jpg";
+import valeyImage from "../assets/valley.png";
+import sabiImage from "../assets/Sabi.jpg";
 import CardTwoImage from "../Components/CardTwoImage";
 import Footer from "../Components/Footer";
-
 
 const Home = () => {
   return (
@@ -39,9 +42,9 @@ const Home = () => {
           buttonText="Services"
           buttonLink="/services"
         ></CardLeft>
-         <CardTwoImage
-          paragraph={TurnKeySection}
-          heading={TurnKey}
+        <CardTwoImage
+          paragraph={IAAText}
+          heading={IAA}
           headingColor="#474747"
           textColor="#6D6D6D"
           imageOne={valeyImage}
@@ -50,7 +53,7 @@ const Home = () => {
           buttonLink="/industrAssociates"
         ></CardTwoImage>
       </GridItem>
-      <GridItem area="footer" bg={'#17733A'}>
+      <GridItem area="footer" bg={"#17733A"}>
         <Footer></Footer>
       </GridItem>
     </Grid>
