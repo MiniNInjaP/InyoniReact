@@ -13,7 +13,8 @@ const About = () => {
         <Header
           headerTwo="A philosphy of knowledge and trust"
           paddingYTwo={2}
-          paddingLeft={79}
+          paddingLeft={70}
+          paddingRight={2}
           headerOne="About"
         ></Header>
       </GridItem>
