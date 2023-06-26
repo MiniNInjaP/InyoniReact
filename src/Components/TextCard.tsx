@@ -1,18 +1,10 @@
-import {
-  Card,
-  Text,
-  CardBody,
-  Heading,
-  VStack,
-  HStack,
-  Box,
-} from "@chakra-ui/react";
+import { Card, Text, CardBody, Heading, HStack, Box } from "@chakra-ui/react";
 
 interface Props {
   headingOne?: string;
   headingTwo?: string;
-  paragraphOne: string;
-  paragraphTwo: string;
+  paragraphOne?: string;
+  paragraphTwo?: string;
   textColor: string;
   headingColor: string;
 }
@@ -55,7 +47,7 @@ const TextCard = ({
               {paragraphOne}
             </Text>
           </Box>
-          <Box width={"50vw"}>
+          <Box width={{ base: "auto", lg: "50vw" }}>
             <Heading
               fontSize={{ base: 20, md: 30, lg: 30 }}
               fontWeight={400}

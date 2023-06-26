@@ -4,8 +4,16 @@ import Banner from "../Components/Banner";
 import Header from "../Components/Header";
 import TextCard from "../Components/TextCard";
 import { TurnKey } from "../TextInput/Headings";
-import { TurnKeySection, philosophyText } from "../TextInput/TextContent";
+import {
+  TurnKeySection,
+  philosophyText,
+  directorOneParagraph,
+  directorTwoParagraph,
+  directorThreeParagraph,
+} from "../TextInput/TextContent";
 import Footer from "../Components/Footer";
+import DirectorCard from "../Components/DirectorCard";
+
 const About = () => (
   <Grid templateAreas={`"nav" "main" "footer"`}>
     <GridItem area="nav">
@@ -29,6 +37,16 @@ const About = () => (
         textColor="#6D6D6D"
       ></TextCard>
       <Header headerOne={"Our People"} paddingRight={0}></Header>
+      <DirectorCard
+        directorOne="Marnus von Wielligh"
+        directorTwo="Jaco Boshoff"
+        directorThree="David van der Merwe"
+        paragraphOne={directorOneParagraph}
+        paragraphTwo={directorTwoParagraph}
+        paragraphThree={directorThreeParagraph}
+        headingColor="#17733A"
+        textColor="#6D6D6D"
+      ></DirectorCard>
     </GridItem>
     <GridItem area="footer" bg={"#17733A"}>
       <Footer></Footer>
