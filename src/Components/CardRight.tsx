@@ -8,8 +8,8 @@ interface Props {
   paragraph: string;
   buttonLink: string;
   buttonText: string;
-  textColor:string;
-  headingColor: string
+  textColor: string;
+  headingColor: string;
 }
 
 const CardRight = ({
@@ -27,11 +27,23 @@ const CardRight = ({
       bg={"white"}
       paddingY={50}
       paddingX={90}
-      justifyContent={"space-between"}
-      flexDir={"row"}
+      justifyContent={{ base: "center", lg: "space-between" }}
+      alignItems={{ base: "center", lg: "space-between" }}
+      flexDir={{ base: "column", lg: "row" }}
     >
-      <CardBody marginTop={0} flexWrap={'wrap'} marginRight={60} paddingY={0} paddingRight={"10%"}>
-        <Heading paddingLeft={10} fontSize={30} fontWeight={400} color={headingColor} marginBottom={3}>
+      <CardBody
+        marginTop={0}
+        flexWrap={"wrap"}
+        paddingY={0}
+        paddingRight={"5%"}
+      >
+        <Heading
+          paddingLeft={10}
+          fontSize={30}
+          fontWeight={400}
+          color={headingColor}
+          marginBottom={3}
+        >
           {heading}
         </Heading>
         <Text fontSize={17} whiteSpace={"pre-wrap"} color={textColor}>
@@ -44,6 +56,7 @@ const CardRight = ({
         </Box>
       </CardBody>
       <Image
+        paddingTop={10}
         paddingRight={200}
         borderRadius={"5px"}
         overflow={"hidden"}

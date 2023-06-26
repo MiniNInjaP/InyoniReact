@@ -26,8 +26,9 @@ const CardLeft = ({
       bg={"#17733A"}
       padding={50}
       display={"flex"}
-      justifyContent={"space-between"}
-      flexDir={"row"}
+      justifyContent={{ base: "center", lg: "space-between" }}
+      alignItems={{ base: "center", lg: "space-between" }}
+      flexDir={{ base: "column", lg: "row" }}
     >
       <Image
         borderRadius={"5px"}
@@ -35,12 +36,18 @@ const CardLeft = ({
         maxWidth={"550px"}
         maxHeight={"415px"}
         src={image}
+        paddingBottom={10}
       ></Image>
-      <CardBody marginTop={0} paddingY={0} paddingLeft={"10%"}>
+      <CardBody paddingX={150} marginTop={0} paddingY={0} paddingLeft={"10%"}>
         <Heading paddingLeft={10} fontSize={30} color={color} marginBottom={3}>
           {heading}
         </Heading>
-        <Text fontSize={17} fontWeight={100} whiteSpace={"pre-wrap"} color={color}>
+        <Text
+          fontSize={17}
+          fontWeight={100}
+          whiteSpace={"pre-wrap"}
+          color={color}
+        >
           {paragraph}
         </Text>
         <Box marginTop={10}>
