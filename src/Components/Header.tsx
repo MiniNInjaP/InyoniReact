@@ -20,7 +20,7 @@ const Header = ({
       flexDirection={{ base: "column", lg: "row" }}
       alignContent={"center"}
       marginY={5}
-      marginX={{ base: "32px", lg: "100px" }}
+      marginX={"5%"}
     >
       <Heading
         marginRight={{ base: 0, lg: 20 }}

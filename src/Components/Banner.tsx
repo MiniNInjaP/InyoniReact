@@ -15,7 +15,7 @@ const Banner = ({ children }: Props) => {
       <Heading
         fontWeight={400}
         paddingBottom={4}
-        paddingRight={300}
+        paddingRight={{ base: 10, md: 20, lg: "300px" }}
         color={"white"}
         fontSize={30}
       >

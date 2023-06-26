@@ -4,7 +4,7 @@ import Button from "../Components/Button";
 
 interface Props {
   image: string;
-  heading: string;
+  heading?: string;
   paragraph: string;
   buttonLink: string;
   buttonText: string;
