@@ -29,6 +29,7 @@ const ContactUs = () => {
           flexDirection={"column"}
           alignItems={"flex-end"}
           width={"50vw"}
+          color={"#6D6D6D"}
         >
           <Heading fontWeight={600} paddingBottom={3} fontSize={20}>
             Company name – Inyoni Africa Irrigation Specialists (Pty) Ltd
@@ -57,11 +58,20 @@ const ContactUs = () => {
           Contact Form
         </FormLabel>
         <HStack paddingY={5}>
-          <Input bg={"lightgray"} placeholder="Name"></Input>
-          <Input bg={"lightgray"} placeholder="Email Address"></Input>
+          <Input
+            bg={"gray.200"}
+            focusBorderColor="#17733A"
+            placeholder="Name"
+          ></Input>
+          <Input
+            bg={"gray.200"}
+            focusBorderColor="#17733A"
+            placeholder="Email Address"
+          ></Input>
         </HStack>
         <Textarea
-          bg={"lightgray"}
+          bg={"gray.200"}
+          focusBorderColor="#17733A"
           placeholder="Message"
           height={"200px"}
         ></Textarea>
