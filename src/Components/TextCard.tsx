@@ -1,6 +1,15 @@
-import { Card, Text, CardBody, Heading, HStack, Box } from "@chakra-ui/react";
+import {
+  Card,
+  Text,
+  CardBody,
+  Heading,
+  HStack,
+  Box,
+  Image,
+} from "@chakra-ui/react";
 
 interface Props {
+  image?: string;
   headingOne?: string;
   headingTwo?: string;
   paragraphOne?: string;
@@ -10,6 +19,7 @@ interface Props {
 }
 
 const TextCard = ({
+  image,
   textColor,
   paragraphOne,
   paragraphTwo,
@@ -63,6 +73,11 @@ const TextCard = ({
             >
               {paragraphTwo}
             </Text>
+            <Image
+              src={image}
+              width={{ base: "100px", lg: "500px" }}
+              marginRight={"200px"}
+            ></Image>
           </Box>
         </HStack>
       </CardBody>
