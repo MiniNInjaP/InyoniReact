@@ -14,44 +14,46 @@ import {
 import Footer from "../Components/Footer";
 import DirectorCard from "../Components/DirectorCard";
 
-const About = () => (
-  <Grid templateAreas={`"nav" "main" "footer"`}>
-    <GridItem area="nav">
-      <NavBar></NavBar>
-      <Box height={{ base: "105px", lg: "130px" }}></Box>
-      <Banner>Overview</Banner>
-    </GridItem>
-    <GridItem area="main">
-      <Header
-        headerTwo="A philosphy of knowledge and trust"
-        paddingYTwo={2}
-        paddingLeft={70}
-        paddingRight={2}
-        headerOne="About"
-      ></Header>
-      <TextCard
-        headingOne={TurnKey}
-        paragraphOne={TurnKeySection}
-        paragraphTwo={philosophyText}
-        headingColor="#474747"
-        textColor="#6D6D6D"
-      ></TextCard>
-      <Header headerOne={"Our People"} paddingRight={0}></Header>
-      <DirectorCard
-        directorOne="Marnus von Wielligh"
-        directorTwo="Jaco Boshoff"
-        directorThree="David van der Merwe"
-        paragraphOne={directorOneParagraph}
-        paragraphTwo={directorTwoParagraph}
-        paragraphThree={directorThreeParagraph}
-        headingColor="#17733A"
-        textColor="#6D6D6D"
-      ></DirectorCard>
-    </GridItem>
-    <GridItem area="footer" bg={"#17733A"}>
-      <Footer></Footer>
-    </GridItem>
-  </Grid>
-);
+const About = () => {
+  return (
+    <Grid templateAreas={`"nav" "main" "footer"`}>
+      <GridItem area="nav">
+        <NavBar pageId={2}></NavBar>
+        <Box height={{ base: "105px", lg: "130px" }}></Box>
+        <Banner>Overview</Banner>
+      </GridItem>
+      <GridItem area="main">
+        <Header
+          headerTwo="A philosphy of knowledge and trust"
+          paddingYTwo={2}
+          paddingLeft={70}
+          paddingRight={2}
+          headerOne="About"
+        ></Header>
+        <TextCard
+          headingOne={TurnKey}
+          paragraphOne={TurnKeySection}
+          paragraphTwo={philosophyText}
+          headingColor="heading.100"
+          textColor="secondary.100"
+        ></TextCard>
+        <Header headerOne={"Our People"} paddingRight={0}></Header>
+        <DirectorCard
+          directorOne="Marnus von Wielligh"
+          directorTwo="Jaco Boshoff"
+          directorThree="David van der Merwe"
+          paragraphOne={directorOneParagraph}
+          paragraphTwo={directorTwoParagraph}
+          paragraphThree={directorThreeParagraph}
+          headingColor="primary.100"
+          textColor="secondary.100"
+        ></DirectorCard>
+      </GridItem>
+      <GridItem area="footer" bg={"primary.100"}>
+        <Footer></Footer>
+      </GridItem>
+    </Grid>
+  );
+};
 
 export default About;

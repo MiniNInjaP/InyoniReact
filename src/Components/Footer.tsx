@@ -23,7 +23,7 @@ const Footer = () => {
         flexDir={{ base: "column", md: "row" }}
         justifyContent={"space-between"}
         alignItems={{ base: "center", md: "flex-start" }}
-        backgroundColor={"#17733A"}
+        backgroundColor={"primary.100"}
       >
         <CardBody
           paddingTop={{ base: 5, md: 8 }}

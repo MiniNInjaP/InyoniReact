@@ -10,16 +10,16 @@ const IconInfoList = () => (
     marginLeft={{ md: "10vw", lg: "20vw" }}
     justifyContent={{ base: "center", md: "center", lg: "flex-start" }}
   >
-    <Icon as={FaPhone} color="green" />
-    <Text color="green">Tel: +27 13 712 2175 |</Text>
-    <Text color="green"> Fax: +27 13 712 4198</Text>
+    <Icon as={FaPhone} color="primary.100" />
+    <Text color="primary.100">Tel: +27 13 712 2175 |</Text>
+    <Text color="primary.100"> Fax: +27 13 712 4198</Text>
     <Button
       margin={0}
       paddingLeft={2}
       style={{ height: "20px" }}
       variant="unstyled"
       fontSize={{ base: 14, md: 12 }}
-      color="green"
+      color="primary.100"
       textAlign={"center"}
       leftIcon={<Icon as={FaEnvelope} />}
     >
@@ -33,7 +33,7 @@ const IconInfoList = () => (
           paddingLeft={2}
           fontSize={{ base: 14, md: 14 }}
           variant="unstyled"
-          leftIcon={<Icon as={FaFacebookF} color="green" />}
+          leftIcon={<Icon as={FaFacebookF} color="primary.100" />}
         ></Button>
       </Link>
     </Show>

@@ -15,7 +15,7 @@ const Services = () => {
   return (
     <Grid templateAreas={`"nav" "main" "footer"`}>
       <GridItem area="nav">
-        <NavBar></NavBar>
+        <NavBar pageId={3}></NavBar>
         <Box height={{ base: "105px", lg: "110px" }}></Box>
       </GridItem>
       <GridItem area="main">
@@ -23,12 +23,12 @@ const Services = () => {
         <Header headerOne="Our Focus" paddingRight={0}></Header>
         <TextCard
           image={valleyPivot}
-          headingColor="#474747"
-          textColor="#6D6D6D"
+          headingColor="heading.100"
+          textColor="secondary.100"
           paragraphOne={ourFocusText}
         ></TextCard>
         <TextCard
-          textColor="#6D6D6D"
+          textColor="secondary.100"
           headingColor="#17733A"
           headingOne="The Best Solution for You"
           headingTwo="Embracing Technology"

@@ -10,7 +10,7 @@ const Banner = ({ children }: Props) => {
       justifyContent={"flex-end"}
       alignItems={"flex-end"}
       height={"90px"}
-      backgroundColor={"#17733A"}
+      backgroundColor={"primary.100"}
     >
       <Heading
         fontWeight={400}

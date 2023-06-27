@@ -3,7 +3,7 @@ import Layout from "./Pages/Layout";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Services from "./Pages/Services";
-import IndustryAssociates from "./Pages/IndustryAssociates";
+import IndustryAssociations from "./Pages/IndustryAssociations";
 import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
 import "./index.css";
@@ -17,10 +17,11 @@ const App = () => {
           <Route path="/about" element={<About />}></Route>
           <Route path="/services" element={<Services />}></Route>
           <Route
-            path="/industryassociates"
-            element={<IndustryAssociates />}
+            path="/industryassociations"
+            element={<IndustryAssociations />}
           ></Route>
           <Route path="/projects" element={<Projects />}></Route>
+          <Route path="/partners" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
         </Route>
       </Routes>

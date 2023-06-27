@@ -23,7 +23,7 @@ const CardLeft = ({
   return (
     <Card
       borderRadius={0}
-      bg={"#17733A"}
+      bg={"primary.100"}
       padding={50}
       display={"flex"}
       flexDir={{ base: "column", lg: "row" }}

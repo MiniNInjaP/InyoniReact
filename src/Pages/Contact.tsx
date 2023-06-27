@@ -8,14 +8,14 @@ const Contact = () => {
   return (
     <Grid templateAreas={`"nav" "main" "footer"`}>
       <GridItem area="nav">
-        <NavBar></NavBar>
+        <NavBar pageId={7}></NavBar>
         <Box height={{ base: "105px", lg: "130px" }}></Box>
       </GridItem>
       <GridItem area="main">
         <Banner>Contact Us</Banner>
         <ContactUs></ContactUs>
       </GridItem>
-      <GridItem area="footer" bg={"#17733A"}>
+      <GridItem area="footer" bg={"primary.100"}>
         <CopyRightBanner></CopyRightBanner>
       </GridItem>
     </Grid>

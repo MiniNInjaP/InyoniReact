@@ -3,7 +3,11 @@ import IconInfoList from "./IconInfoList";
 import Logo from "./Logo";
 import NavigationList from "./NavigationList";
 
-const NavBar = () => {
+interface Props {
+  pageId: number;
+}
+
+const NavBar = ({ pageId }: Props) => {
   return (
     <Box
       bgColor="#fff"
@@ -15,7 +19,7 @@ const NavBar = () => {
       <IconInfoList></IconInfoList>
       <HStack justifyContent="space-between" paddingX={{ base: 2, lg: 10 }}>
         <Logo></Logo>
-        <NavigationList></NavigationList>
+        <NavigationList pageId={pageId}></NavigationList>
       </HStack>
     </Box>
   );

@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <Grid boxSizing="border-box" templateAreas={`"nav" "main" "footer"`}>
       <GridItem area="nav">
-        <NavBar></NavBar>
+        <NavBar pageId={1}></NavBar>
         <Box height={{ base: "105px", lg: "130px" }}></Box>
       </GridItem>
       <GridItem area="main">
@@ -29,8 +29,8 @@ const Home = () => {
         <CardRight
           paragraph={TurnKeySection}
           heading={TurnKey}
-          headingColor="#474747"
-          textColor="#6D6D6D"
+          headingColor="heading.100"
+          textColor="secondary.100"
           image={iaSAIcon}
           buttonText="About Us"
           buttonLink="/about"
@@ -46,15 +46,15 @@ const Home = () => {
         <CardTwoImage
           paragraph={IAAText}
           heading={IAA}
-          headingColor="#474747"
-          textColor="#6D6D6D"
+          headingColor="heading.100"
+          textColor="secondary.100"
           imageOne={valeyImage}
           imageTwo={sabiImage}
           buttonText="More Information"
           buttonLink="/industrAssociates"
         ></CardTwoImage>
       </GridItem>
-      <GridItem area="footer" bg={"#17733A"}>
+      <GridItem area="footer" bg={"primary.100"}>
         <Footer></Footer>
         <CopyRightBanner></CopyRightBanner>
       </GridItem>

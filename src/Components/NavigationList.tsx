@@ -10,32 +10,40 @@ import {
   MenuDivider,
   Button,
   Icon,
+  layout,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { color } from "framer-motion";
 
-const NavigationList = () => {
+interface Props {
+  pageId: number;
+}
+
+const NavigationList = ({ pageId }: Props) => {
   const mainMenu = useDisclosure();
   const subMenu = useDisclosure();
-
   const navItems = [
-    { link: "/", label: "Home" },
-    { link: "/about", label: "About" },
-    { link: "/services", label: "Services" },
-    { link: "/industryassociates", label: "Industry Associates" },
-    { link: "/projects", label: "Projects" },
+    { id: 1, link: "/", label: "Home" },
+    { id: 2, link: "/about", label: "About" },
+    { id: 3, link: "/services", label: "Services" },
+    { id: 4, link: "/industryassociations", label: "Industry Associations" },
+    { id: 5, link: "/projects", label: "Projects" },
   ];
+
   return (
     <>
       <Show below="lg">
         <Menu>
           <MenuButton
+            color={"black"}
             as={Button}
             variant={"unstyled"}
             leftIcon={<FaBars />}
           ></MenuButton>
           <MenuList
+            color={"secondary.100"}
             borderRadius={0}
             width={"80vw"}
             position={"absolute"}
@@ -92,24 +100,49 @@ const NavigationList = () => {
       </Show>
       <Show above="lg">
         <List
+          color={"secondary.100"}
           fontSize={{ lg: 13, xl: 20 }}
           paddingTop={2}
           display="flex"
           flex="d-flex"
         >
-          {navItems.map((item) => (
-            <ListItem
-              paddingBottom={10}
-              paddingTop={8}
-              paddingX={3}
-              key={item.label}
-            >
-              <Link  to={item.link}>{item.label}</Link>
-            </ListItem>
-          ))}
+          {navItems.map((item) =>
+            item.id === pageId ? (
+              <ListItem
+                paddingBottom={10}
+                paddingTop={8}
+                paddingX={3}
+                color={"primary.100"}
+                fontWeight={600}
+                key={item.label}
+              >
+                <Link to={item.link}>{item.label}</Link>
+              </ListItem>
+            ) : (
+              <ListItem
+                _hover={{ transform: "scale(1.2)", color: "primary.100" }}
+                transition={"all 0.3s"}
+                paddingBottom={10}
+                paddingTop={8}
+                paddingX={3}
+                key={item.label}
+              >
+                <Link to={item.link}>{item.label}</Link>
+              </ListItem>
+            )
+          )}
           <Menu isOpen={mainMenu.isOpen}>
-            <Link to={'/partners'}>
+            <Link to={"/partners"}>
               <MenuButton
+                color={pageId === 2 ? "primary.100" : "secondary.100"}
+                fontWeight={pageId === 2 ? "600" : "normal"}
+                _hover={{
+                  border: 0,
+                  outline: 0,
+                  transform: "scale(1.2)",
+                  color: "primary.100",
+                }}
+                transition={"all 0.3s"}
                 as={Button}
                 variant="unstyled"
                 marginTop={{ lg: "22px", xl: "27px" }}
@@ -121,7 +154,6 @@ const NavigationList = () => {
                     <ChevronDownIcon />
                   </Icon>
                 }
-                fontWeight="normal"
               >
                 Partners
               </MenuButton>
@@ -177,13 +209,25 @@ const NavigationList = () => {
                 </MenuList>
                 <MenuDivider></MenuDivider>
               </Menu>
-              <MenuItem  target="_blank"
-                 as={Link} to={"https://www.netafim.co.za/"}>
+              <MenuItem
+                target="_blank"
+                as={Link}
+                to={"https://www.netafim.co.za/"}
+              >
                 Netafim
               </MenuItem>
             </MenuList>
           </Menu>
-          <ListItem as={Link} to={"/contact"} paddingTop={8} paddingX={3}>
+          <ListItem
+            color={pageId === 7 ? "primary.100" : "secondary.100"}
+            fontWeight={pageId === 7 ? "600" : "normal"}
+            _hover={{ transform: "scale(1.2)", color: "primary.100" }}
+            transition={"all 0.3s"}
+            as={Link}
+            to={"/contact"}
+            paddingTop={8}
+            paddingX={3}
+          >
             Contact Us
           </ListItem>
         </List>

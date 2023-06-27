@@ -10,7 +10,7 @@ const HeroBanner = () => {
         color={"white"}
         position={"relative"}
         className={styles["hero-text"]}
-        textShadow={"2px 5px 5px #32a852"}
+        textShadow={"2px 5px 5px #17733A"}
       >
         More than 40,000ha under irrigation - and growing
       </Text>

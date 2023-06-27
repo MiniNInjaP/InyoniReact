@@ -30,7 +30,7 @@ const Header = ({
         paddingX={10}
         paddingY={2}
         color={"white"}
-        backgroundColor="#17733A"
+        backgroundColor="primary.100"
         width={{ base: "95%", lg: "50%" }}
       >
         {headerOne}
@@ -42,7 +42,7 @@ const Header = ({
         paddingRight={{ base: 1, lg: paddingRight }}
         paddingY={paddingYTwo}
         color={"white"}
-        backgroundColor="#17733A"
+        backgroundColor="primary.100"
         width={{ base: "95%", lg: "50%" }}
         fontSize={{ base: 25, lg: 18, xl: 25 }}
       >
