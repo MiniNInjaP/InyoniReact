@@ -15,6 +15,7 @@ import valeyImage from "../assets/valley.png";
 import sabiImage from "../assets/Sabi.jpg";
 import CardTwoImage from "../Components/CardTwoImage";
 import Footer from "../Components/Footer";
+import CopyRightBanner from "../Components/CopyRightBanner";
 
 const Home = () => {
   return (
@@ -55,6 +56,7 @@ const Home = () => {
       </GridItem>
       <GridItem area="footer" bg={"#17733A"}>
         <Footer></Footer>
+        <CopyRightBanner></CopyRightBanner>
       </GridItem>
     </Grid>
   );

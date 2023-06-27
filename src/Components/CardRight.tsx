@@ -27,7 +27,6 @@ const CardRight = ({
       bg={"white"}
       paddingY={50}
       paddingX={{ base: 0, md: 90 }}
-      width={"100vw"}
       justifyContent={{ base: "center", lg: "space-between" }}
       alignItems={{ base: "center", lg: "space-between" }}
       flexDir={{ base: "column", lg: "row" }}

@@ -6,20 +6,16 @@ import {
   FormLabel,
   HStack,
   Heading,
-  IconButton,
   Input,
   Text,
   Textarea,
 } from "@chakra-ui/react";
 import { footerText } from "../TextInput/TextContent";
-
 import Button from "./Button";
-import { Link } from "react-router-dom";
-import { FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <HStack border={0} flexDirection={"column"} width={"100vw"}>
+    <HStack border={0} flexDirection={"column"}>
       <Card
         borderRadius={0}
         paddingX={{ base: 0, lg: 0 }}
@@ -87,25 +83,6 @@ const Footer = () => {
           </FormControl>
         </Box>
       </Card>
-      <HStack
-        width={"100vw"}
-        paddingX={20}
-        justifyContent={"space-between"}
-        borderRadius={0}
-        bgColor={"rgba(0,0,0,0.8)"}
-      >
-        <Text paddingRight={5} fontSize={5} color={"white"}>
-          Copyrights Inyoni Africa (PTY)Ltd.
-        </Text>
-        <Link target="_blank" to={"https://www.facebook.com/InyoniAfrica/"}>
-          <IconButton
-            boxSize={5}
-            fontSize={10}
-            aria-label="Facebook-Link"
-            icon={<FaFacebookF />}
-          ></IconButton>
-        </Link>
-      </HStack>
     </HStack>
   );
 };

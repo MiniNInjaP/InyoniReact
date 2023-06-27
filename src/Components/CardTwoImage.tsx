@@ -38,7 +38,6 @@ const CardTwoImage = ({
       paddingY={50}
       display={"flex"}
       paddingX={{ base: 0, lg: 90 }}
-      width={"100vw"}
       justifyContent={{ base: "center", lg: "space-between" }}
       alignItems={{ base: "center", lg: "space-between" }}
       flexDir={{ base: "column", lg: "row" }}

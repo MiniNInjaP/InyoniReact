@@ -16,6 +16,7 @@ const ContactUs = () => {
   return (
     <>
       <HStack
+        width={"90vw"}
         spacing={20}
         paddingTop={10}
         paddingBottom={10}
@@ -26,9 +27,9 @@ const ContactUs = () => {
           lineHeight={10}
           fontSize={20}
           display={"flex"}
+          paddingLeft={200}
           flexDirection={"column"}
           alignItems={"flex-end"}
-          width={"50vw"}
           color={"#6D6D6D"}
         >
           <Heading fontWeight={600} paddingBottom={3} fontSize={20}>
@@ -51,7 +52,12 @@ const ContactUs = () => {
             Physical Address: 51 President Street, Barberton, 1300, South Africa
           </Text>
         </Box>
-        <Image width={"350px"} src={iaSAIcon}></Image>
+        <Image
+          overflow={"hidden"}
+          boxSize={"contain"}
+          width={"350px"}
+          src={iaSAIcon}
+        ></Image>
       </HStack>
       <FormControl marginBottom={20} paddingX={"200px"}>
         <FormLabel fontSize={30} color={"#17733A"} fontWeight={400}>

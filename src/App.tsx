@@ -5,7 +5,8 @@ import About from "./Pages/About";
 import Services from "./Pages/Services";
 import IndustryAssociates from "./Pages/IndustryAssociates";
 import Projects from "./Pages/Projects";
-import Contact from "./Pages/ContactUs";
+import Contact from "./Pages/Contact";
+import "./index.css";
 
 const App = () => {
   return (
