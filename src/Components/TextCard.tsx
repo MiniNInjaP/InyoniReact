@@ -28,7 +28,7 @@ const TextCard = ({
   headingColor,
 }: Props) => {
   return (
-    <Card>
+    <Card boxShadow={0}>
       <CardBody
         justifyContent={"space-between"}
         marginTop={"1%"}

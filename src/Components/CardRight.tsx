@@ -23,6 +23,7 @@ const CardRight = ({
 }: Props) => {
   return (
     <Card
+      boxShadow={0}
       borderRadius={0}
       bg={"white"}
       paddingY={50}

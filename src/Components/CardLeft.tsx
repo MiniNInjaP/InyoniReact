@@ -22,6 +22,7 @@ const CardLeft = ({
 }: Props) => {
   return (
     <Card
+      boxShadow={0}
       borderRadius={0}
       bg={"primary.100"}
       padding={50}
