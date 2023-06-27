@@ -25,8 +25,9 @@ const Header = ({
       <Heading
         marginRight={{ base: 0, lg: 20 }}
         marginBottom={{ base: 5, lg: 0 }}
-        fontWeight={300}
+        fontWeight={500}
         borderRadius={"5px"}
+        fontSize={{ base: "28px" }}
         paddingX={10}
         paddingY={2}
         color={"white"}

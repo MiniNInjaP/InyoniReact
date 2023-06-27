@@ -13,12 +13,14 @@ import Button from "./Button";
 interface Props {
   imageOne: string;
   imageTwo: string;
-  heading: string;
+  heading?: string;
   paragraph: string;
   buttonLink: string;
   buttonText: string;
   textColor: string;
   headingColor: string;
+  paddingY: number;
+  showButton: boolean;
 }
 
 const CardTwoImage = ({
@@ -30,12 +32,15 @@ const CardTwoImage = ({
   headingColor,
   buttonLink,
   buttonText,
+  paddingY,
+  showButton,
 }: Props) => {
   return (
     <Card
+      boxShadow={0}
       borderRadius={0}
       bg={"white"}
-      paddingY={50}
+      paddingY={paddingY}
       display={"flex"}
       paddingX={{ base: 0, lg: 90 }}
       justifyContent={{ base: "center", lg: "space-between" }}
@@ -66,7 +71,7 @@ const CardTwoImage = ({
         </Text>
         <Box marginTop={10}>
           <Link to={buttonLink}>
-            <Button variant="primary">{buttonText}</Button>
+            {showButton && <Button variant="primary">{buttonText}</Button>}
           </Link>
         </Box>
       </CardBody>

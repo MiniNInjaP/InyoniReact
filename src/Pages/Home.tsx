@@ -44,6 +44,8 @@ const Home = () => {
           buttonLink="/services"
         ></CardLeft>
         <CardTwoImage
+          showButton={true}
+          paddingY={10}
           paragraph={IAAText}
           heading={IAA}
           headingColor="heading.100"
