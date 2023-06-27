@@ -5,12 +5,14 @@ import { Link } from "react-router-dom";
 const CopyRightBanner = () => {
   return (
     <HStack
-      paddingX={40}
+      paddingX={{ base: 20, lg: "8%", xl: "20%", "2xl": "33%" }}
+      paddingY={2}
       justifyContent={"space-between"}
       borderRadius={0}
       bgColor={"rgba(0,0,0,0.8)"}
+      fontSize={{ base: 8, md: 12, lg: 15 }}
     >
-      <Text paddingRight={5} fontSize={20} color={"white"}>
+      <Text whiteSpace={"nowrap"} paddingRight={15} color={"white"}>
         Copyrights Inyoni Africa (PTY)Ltd.
       </Text>
       <Link target="_blank" to={"https://www.facebook.com/InyoniAfrica/"}>
