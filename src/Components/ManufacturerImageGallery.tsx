@@ -30,32 +30,40 @@ const ManufacturerImageGallery = ({ children }: Props) => {
         {children}
       </Heading>
 
-      <Grid paddingBottom={3} templateColumns="repeat(3, 1fr)" gap={4}>
+      <Grid
+        paddingBottom={3}
+        templateColumns={{ base: "1fr", lg: "repeat(3, 1fr)" }}
+        gap={4}
+      >
         {/* First Row */}
         <GridItem colSpan={1}>
-          <Box w={"300px"}>
+          <Box w={{ base: "200px", lg: "300px" }}>
             <Image src={alstromImage}></Image>
           </Box>
         </GridItem>
         <GridItem colSpan={1}>
-          <Box w={"300px"}>
+          <Box w={{ base: "200px", lg: "300px" }}>
             <Image src={mottechImage}></Image>
           </Box>
         </GridItem>
         <GridItem colSpan={1}>
-          <Box w={"300px"}>
+          <Box w={{ base: "200px", lg: "300px" }}>
             <Image src={arkalImage}></Image>
           </Box>
         </GridItem>
       </Grid>
-      <Grid paddingBottom={3} templateColumns="repeat(2, 1fr)" gap={4}>
+      <Grid
+        paddingBottom={3}
+        templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
+        gap={4}
+      >
         <GridItem colSpan={1}>
-          <Box w={"300px"}>
+          <Box w={{ base: "200px", lg: "300px" }}>
             <Image src={wegImage}></Image>
           </Box>
         </GridItem>
         <GridItem colSpan={1}>
-          <Box w={"300px"}>
+          <Box w={{ base: "200px", lg: "300px" }}>
             <Image src={ksbImage}></Image>
           </Box>
         </GridItem>
@@ -63,22 +71,22 @@ const ManufacturerImageGallery = ({ children }: Props) => {
       <Grid
         paddingBottom={0}
         marginBottom={0}
-        templateColumns="repeat(3, 1fr)"
+        templateColumns={{ base: "1fr", lg: "repeat(3, 1fr)" }}
         gap={4}
       >
         {/* First Row */}
         <GridItem colSpan={1}>
-          <Box w={"300px"}>
+          <Box w={{ base: "200px", lg: "300px" }}>
             <Image src={netafimImage}></Image>
           </Box>
         </GridItem>
         <GridItem colSpan={1}>
-          <Box w={"300px"}>
+          <Box w={{ base: "200px", lg: "300px" }}>
             <Image src={rockwellImage}></Image>
           </Box>
         </GridItem>
         <GridItem colSpan={1}>
-          <Box w={"300px"}>
+          <Box w={{ base: "200px", lg: "300px" }}>
             <Image src={vyrsaImage}></Image>
           </Box>
         </GridItem>
