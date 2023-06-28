@@ -1,5 +1,4 @@
 import {
-  Box,
   Card,
   CardBody,
   FormControl,
@@ -15,74 +14,78 @@ import Button from "./Button";
 
 const Footer = () => {
   return (
-    <HStack border={0} flexDirection={"column"}>
+    <HStack
+      flexDirection={{ base: "column", md: "row" }}
+      justifyContent={"space-evenly"}
+      alignItems={"center"}
+    >
       <Card
         borderRadius={0}
-        paddingX={{ base: 0, lg: 0 }}
+        paddingLeft={1}
+        boxShadow={0}
         color={"white"}
         flexDir={{ base: "column", md: "row" }}
-        justifyContent={"space-between"}
-        alignItems={{ base: "center", md: "flex-start" }}
         backgroundColor={"primary.100"}
       >
         <CardBody
-          paddingTop={{ base: 5, md: 8 }}
+          paddingTop={{ base: 5, md: 0 }}
+          paddingBottom={0}
           lineHeight={{ base: 2, md: 5, lg: 6 }}
-          paddingRight={{ base: 0, md: 10 }}
-          border={0}
         >
-          <Heading paddingBottom={2} fontSize={{ base: 12, md: 17, lg: 22 }}>
+          <Heading
+            paddingBottom={{ base: 1, md: 10 }}
+            fontSize={{ base: 12, md: 17, lg: 20 }}
+          >
             Bussiness Information
           </Heading>
-          <Heading fontWeight={400} fontSize={{ base: 9, md: 15, lg: 18 }}>
+          <Heading fontWeight={400} fontSize={{ base: 9, md: 15, lg: 15 }}>
             Inyoni Africa Irrigation Specialists (Pty) Ltd
           </Heading>
-          <Text fontSize={{ base: 7, md: 12, lg: 15 }}>
+          <Text fontSize={{ base: 7, md: 12, lg: 12 }}>
             Registration number 2004/033490/07
           </Text>
-          <Heading
-            paddingY={{ md: 1 }}
-            fontWeight={400}
-            fontSize={{ base: 9, md: 15, lg: 18 }}
-          >
+          <Heading fontWeight={400} fontSize={{ base: 9, md: 15, lg: 15 }}>
             Contact details & Web address
           </Heading>
-          <Text fontSize={{ base: 7, md: 12, lg: 15 }} whiteSpace={"pre-wrap"}>
+          <Text fontSize={{ base: 7, md: 12, lg: 12 }} whiteSpace={"pre-wrap"}>
             {footerText}
           </Text>
         </CardBody>
-        <Box width={{ base: 200, lg: 400 }}>
-          <FormControl color="black" marginY={7}>
-            <FormLabel fontSize={{ base: 12, md: 15, lg: 18 }} color={"white"}>
-              Get in Touch
-            </FormLabel>
-            <HStack>
-              <Input
-                borderRadius={0}
-                bgColor={"#FFF"}
-                type="text"
-                placeholder="Name"
-              ></Input>
-              <Input
-                borderRadius={0}
-                bgColor={"#FFF"}
-                type="email"
-                placeholder="Email Address"
-              ></Input>
-            </HStack>
-            <Textarea
-              bgColor={"#FFF"}
-              height={150}
-              borderRadius={0}
-              marginY={2}
-              placeholder="Message"
-            />
-            <HStack justifyContent={"flex-end"}>
-              <Button variant="secondary">Submit</Button>
-            </HStack>
-          </FormControl>
-        </Box>
       </Card>
+      <FormControl
+        width={{ base: 200, lg: 400 }}
+        color="black"
+        paddingTop={{ base: 0, md: 7 }}
+        paddingBottom={5}
+      >
+        <FormLabel fontSize={{ base: 12, md: 15, lg: 20 }} color={"white"}>
+          Get in Touch
+        </FormLabel>
+        <HStack>
+          <Input
+            borderRadius={0}
+            bgColor={"#FFF"}
+            type="text"
+            placeholder="Name"
+          ></Input>
+          <Input
+            borderRadius={0}
+            bgColor={"#FFF"}
+            type="email"
+            placeholder="Email Address"
+          ></Input>
+        </HStack>
+        <Textarea
+          bgColor={"#FFF"}
+          height={150}
+          borderRadius={0}
+          marginY={2}
+          placeholder="Message"
+        />
+        <HStack justifyContent={"flex-end"}>
+          <Button variant="secondary">Submit</Button>
+        </HStack>
+      </FormControl>
     </HStack>
   );
 };
