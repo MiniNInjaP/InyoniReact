@@ -34,7 +34,7 @@ const DirectorCard = ({
           justifyContent={"space-between"}
           spacing={"10%"}
         >
-          <Box width={{ base: "auto", lg: "50vw" }} flexDirection={"column"}>
+          <Box width={{ base: "auto", lg: "50%" }} flexDirection={"column"}>
             <Heading
               fontSize={{ base: 20, md: 30, lg: 30 }}
               fontWeight={400}
@@ -66,7 +66,7 @@ const DirectorCard = ({
               {paragraphTwo}
             </Text>
           </Box>
-          <Box width={"50vw"}>
+          <Box width={{ base: "auto", lg: "50%" }}>
             <Heading
               fontSize={{ base: 20, md: 30, lg: 30 }}
               fontWeight={400}

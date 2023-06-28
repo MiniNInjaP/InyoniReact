@@ -10,9 +10,9 @@ import {
 
 interface Props {
   image?: string;
-  headingOne?: string;
+  headingOne: string;
   headingTwo?: string;
-  paragraphOne?: string;
+  paragraphOne: string;
   paragraphTwo?: string;
   textColor: string;
   headingColor: string;
