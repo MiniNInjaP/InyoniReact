@@ -77,6 +77,7 @@ const CardTwoImage = ({
       <HStack
         paddingLeft={{ base: 3, md: 0 }}
         paddingRight={{ base: 3 }}
+        flexDirection={{ base: "column", md: "row" }}
         justifyContent={"space-evenly"}
       >
         <Image
