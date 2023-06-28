@@ -13,17 +13,6 @@ interface Props {
 }
 
 const ManufacturerImageGallery = ({ children }: Props) => {
-  const images = [
-    { id: 1, img: alstromImage },
-    { id: 2, img: mottechImage },
-    { id: 3, img: arkalImage },
-    { id: 4, img: wegImage },
-    { id: 5, img: ksbImage },
-    { id: 6, img: netafimImage },
-    { id: 7, img: rockwellImage },
-    { id: 8, img: vyrsaImage },
-  ];
-
   return (
     <HStack flexDirection={"column"} paddingY={10}>
       <Heading

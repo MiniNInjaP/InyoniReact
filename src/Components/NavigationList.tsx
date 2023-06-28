@@ -10,12 +10,10 @@ import {
   MenuDivider,
   Button,
   Icon,
-  layout,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { color } from "framer-motion";
 
 interface Props {
   pageId: number;
