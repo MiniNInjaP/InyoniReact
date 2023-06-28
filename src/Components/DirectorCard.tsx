@@ -47,6 +47,7 @@ const DirectorCard = ({
               fontSize={{ base: 15, md: 15, lg: 17 }}
               whiteSpace={"pre-wrap"}
               color={textColor}
+              marginBottom={5}
             >
               {paragraphOne}
             </Text>
@@ -62,6 +63,7 @@ const DirectorCard = ({
               fontSize={{ base: 15, md: 15, lg: 17 }}
               whiteSpace={"pre-wrap"}
               color={textColor}
+              marginBottom={5}
             >
               {paragraphTwo}
             </Text>
@@ -79,6 +81,7 @@ const DirectorCard = ({
               fontSize={{ base: 15, md: 15, lg: 17 }}
               whiteSpace={"pre-wrap"}
               color={textColor}
+              marginBottom={5}
             >
               {paragraphThree}
             </Text>
@@ -94,6 +97,7 @@ const DirectorCard = ({
               fontSize={{ base: 15, md: 15, lg: 17 }}
               whiteSpace={"pre-wrap"}
               color={textColor}
+              marginBottom={5}
             >
               {paragraphFour}
             </Text>
