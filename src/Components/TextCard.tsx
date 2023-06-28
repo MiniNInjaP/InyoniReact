@@ -10,7 +10,7 @@ import {
 
 interface Props {
   image?: string;
-  headingOne: string;
+  headingOne?: string;
   headingTwo?: string;
   paragraphOne: string;
   paragraphTwo?: string;

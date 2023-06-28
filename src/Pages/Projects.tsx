@@ -15,6 +15,7 @@ import {
   xinavaneText,
 } from "../TextInput/TextContent";
 import ProjectCardLeft from "../Components/ProjectCardLeft";
+import HighlightsCard from "../Components/HighlightsCard";
 
 const Projects = () => {
   return (
@@ -43,6 +44,10 @@ const Projects = () => {
           headingTwo={Xinavane}
           paragraphTwo={xinavaneText}
         ></ProjectCardLeft>
+        <HighlightsCard
+          textColor={"secondary.100"}
+          headingColor={"heading.100"}
+        ></HighlightsCard>
       </GridItem>
       <GridItem area="footer" bg="primary.100">
         <CopyRightBanner></CopyRightBanner>

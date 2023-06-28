@@ -43,6 +43,7 @@ export const solutionText = `We’ll help you select the most appropriate soluti
 – Overhead Sprinkler – low implementation cost, higher labour requirements, higher power requirement.`
 
 export const embracingText =`Inyoni Africa believes in the power of technology. It’s helped us to remain at the forefront of service delivery and we are always eager to find innovative new ways of further improving our service and reliability. Some of the technologies we have adopted include:
+
 – Trimble Real Time Kinematic GPS Survey Equipment;
 – Model Maker Irrigation Design Software;
 – Latest AutoCAD Draughting Software;
