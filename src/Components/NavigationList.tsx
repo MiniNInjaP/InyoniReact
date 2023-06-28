@@ -105,7 +105,7 @@ const NavigationList = ({ pageId }: Props) => {
       <Show above="lg">
         <List
           color={"secondary.100"}
-          fontSize={{ lg: 13, xl: 16, "2xl": 25 }}
+          fontSize={{ lg: 13, xl: 16 }}
           paddingTop={2}
           display="flex"
           flex="d-flex"
@@ -149,11 +149,11 @@ const NavigationList = ({ pageId }: Props) => {
                 transition={"all 0.3s"}
                 as={Button}
                 variant="unstyled"
-                marginTop={{ lg: "22px", xl: "25px", "2xl": "32px" }}
+                marginTop={{ lg: "24px" }}
                 onMouseEnter={mainMenu.onOpen}
                 borderRadius={0}
                 marginX={2}
-                fontSize={{ lg: 13, xl: 16, "2xl": 25 }}
+                fontSize={{ lg: 13, xl: 16 }}
                 rightIcon={
                   <Icon position={"relative"} top={1}>
                     <ChevronDownIcon />
@@ -224,7 +224,7 @@ const NavigationList = ({ pageId }: Props) => {
             </MenuList>
           </Menu>
           <ListItem
-            fontSize={{ lg: 13, xl: 16, "2xl": 25 }}
+            fontSize={{ lg: 13, xl: 16 }}
             color={pageId === 7 ? "primary.100" : "secondary.100"}
             fontWeight={pageId === 7 ? "600" : "normal"}
             _hover={{ transform: "scale(1.2)", color: "primary.100" }}

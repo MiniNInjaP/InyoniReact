@@ -22,6 +22,7 @@ const ContactUs = () => {
         alignItems={"flex-start"}
         marginTop={5}
         paddingX={2}
+        marginX={10}
         flexDirection={{ base: "column", lg: "row" }}
         justifyContent={"space-around"}
       >
@@ -60,7 +61,7 @@ const ContactUs = () => {
           src={iaSAIcon}
         ></Image>
       </HStack>
-      <FormControl marginBottom={20} paddingX={{ base: 10 }}>
+      <FormControl marginBottom={20} paddingX={{ base: 10, lg: 300 }}>
         <FormLabel fontSize={30} color={"primary.100"} fontWeight={400}>
           Contact Form
         </FormLabel>
