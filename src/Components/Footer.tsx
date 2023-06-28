@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import {
   Card,
   CardBody,
@@ -14,7 +14,12 @@ import { footerText } from "../TextInput/TextContent";
 import Button from "./Button";
 
 const Footer = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
+
+  const onSubmit = (data: FieldValues) => {
+    console.log(data);
+    reset();
+  };
   return (
     <HStack
       flexDirection={{ base: "column", md: "row" }}
@@ -54,7 +59,7 @@ const Footer = () => {
           </Text>
         </CardBody>
       </Card>
-      <form onSubmit={handleSubmit((data) => console.log(data))}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <FormControl
           width={{ base: 200, lg: 400 }}
           color="black"

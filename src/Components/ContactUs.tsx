@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import styles from "../Styles/Button.module.css";
 import {
   Box,
@@ -16,8 +16,12 @@ import { Link } from "react-router-dom";
 import iaSAIcon from "../assets/IA-SA-Icon-Small.jpg";
 
 const ContactUs = () => {
-  const { handleSubmit, register } = useForm();
+  const { handleSubmit, register, reset } = useForm();
 
+  const onSubmit = (data: FieldValues) => {
+    console.log(data);
+    reset();
+  };
   return (
     <>
       <HStack
@@ -65,7 +69,7 @@ const ContactUs = () => {
           src={iaSAIcon}
         ></Image>
       </HStack>
-      <form onSubmit={handleSubmit((data) => console.log(data))}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <FormControl paddingX={{ base: 10, lg: 300 }}>
           <FormLabel fontSize={30} color={"primary.100"} fontWeight={400}>
             Contact Form
