@@ -11,29 +11,30 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import iaSAIcon from "../assets/IA-SA-Icon-Small.jpg";
+import Button from "./Button";
 
 const ContactUs = () => {
   return (
     <>
       <HStack
-        width={"90vw"}
         spacing={20}
-        paddingTop={10}
-        paddingBottom={10}
+        paddingY={10}
         alignItems={"flex-start"}
         marginTop={5}
+        paddingX={2}
+        flexDirection={{ base: "column", lg: "row" }}
+        justifyContent={"space-around"}
       >
         <Box
           lineHeight={10}
           fontSize={20}
           display={"flex"}
-          paddingLeft={200}
           flexDirection={"column"}
-          alignItems={"flex-end"}
+          alignItems={{ base: "flex-start", lg: "flex-end" }}
           color={"secondary.100"}
         >
-          <Heading fontWeight={600} paddingBottom={3} fontSize={20}>
-            Company name – Inyoni Africa Irrigation Specialists (Pty) Ltd
+          <Heading fontWeight={600} paddingBottom={3} fontSize={18}>
+            Company name - Inyoni Africa Irrigation Specialists (Pty) Ltd
           </Heading>
           <Text>Registration number 2004/033490/07</Text>
           <Text>Contact details & Web address</Text>
@@ -55,15 +56,15 @@ const ContactUs = () => {
         <Image
           overflow={"hidden"}
           boxSize={"contain"}
-          width={"350px"}
+          width={{ base: "200px", lg: "350px" }}
           src={iaSAIcon}
         ></Image>
       </HStack>
-      <FormControl marginBottom={20} paddingX={"200px"}>
+      <FormControl marginBottom={20} paddingX={{ base: 10 }}>
         <FormLabel fontSize={30} color={"primary.100"} fontWeight={400}>
           Contact Form
         </FormLabel>
-        <HStack paddingY={5}>
+        <HStack flexDirection={{ base: "column", lg: "row" }} paddingY={5}>
           <Input
             bg={"gray.200"}
             focusBorderColor="primary.100"
@@ -81,6 +82,9 @@ const ContactUs = () => {
           placeholder="Message"
           height={"200px"}
         ></Textarea>
+        <HStack width={"100%"} marginTop={2} justifyContent={"flex-end"}>
+          <Button variant="primary">Send</Button>
+        </HStack>
       </FormControl>
     </>
   );
