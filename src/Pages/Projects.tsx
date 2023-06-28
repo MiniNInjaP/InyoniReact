@@ -1,12 +1,20 @@
 import { Grid, GridItem, Box } from "@chakra-ui/react";
 import NavBar from "../Components/NavBar";
-import CopyRightBanner from "../Components/CopyRightBanner";
-import sipofaneImage from "../assets/SipofaneniSwaziland.jpg";
-import ProjectBanner from "../Components/ProjectBanner";
 import ProjectCardRight from "../Components/ProjectCardRight";
+import CopyRightBanner from "../Components/CopyRightBanner";
+import ProjectBanner from "../Components/ProjectBanner";
 
-import { RoyalSwazi, UbomboSuagr } from "../TextInput/Headings";
-import { royalSwaziText, ubomboSugarText } from "../TextInput/TextContent";
+import xinavaneIimage from "../assets/XinavaneBarge.jpg";
+import sipofaneImage from "../assets/SipofaneniSwaziland.jpg";
+
+import { RoyalSwazi, UbomboSuagr, TPC, Xinavane } from "../TextInput/Headings";
+import {
+  royalSwaziText,
+  ubomboSugarText,
+  tpcText,
+  xinavaneText,
+} from "../TextInput/TextContent";
+import ProjectCardLeft from "../Components/ProjectCardLeft";
 
 const Projects = () => {
   return (
@@ -26,6 +34,15 @@ const Projects = () => {
           headingTwo={UbomboSuagr}
           paragraphTwo={ubomboSugarText}
         ></ProjectCardRight>
+        <ProjectCardLeft
+          image={xinavaneIimage}
+          textColor={"secondary.100"}
+          headingColor={"heading.100"}
+          headingOne={TPC}
+          paragraphOne={tpcText}
+          headingTwo={Xinavane}
+          paragraphTwo={xinavaneText}
+        ></ProjectCardLeft>
       </GridItem>
       <GridItem area="footer" bg="primary.100">
         <CopyRightBanner></CopyRightBanner>
