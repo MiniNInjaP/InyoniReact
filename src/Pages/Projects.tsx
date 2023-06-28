@@ -1,4 +1,4 @@
-import { Grid, GridItem, Box } from "@chakra-ui/react";
+import { Grid, GridItem, Box, HStack } from "@chakra-ui/react";
 import NavBar from "../Components/NavBar";
 import ProjectCardRight from "../Components/ProjectCardRight";
 import CopyRightBanner from "../Components/CopyRightBanner";
@@ -16,6 +16,7 @@ import {
 } from "../TextInput/TextContent";
 import ProjectCardLeft from "../Components/ProjectCardLeft";
 import HighlightsCard from "../Components/HighlightsCard";
+import RecentProjectsCard from "../Components/RecentProjectsCard";
 
 const Projects = () => {
   return (
@@ -44,10 +45,13 @@ const Projects = () => {
           headingTwo={Xinavane}
           paragraphTwo={xinavaneText}
         ></ProjectCardLeft>
-        <HighlightsCard
-          textColor={"secondary.100"}
-          headingColor={"heading.100"}
-        ></HighlightsCard>
+        <HStack>
+          <HighlightsCard
+            textColor={"secondary.100"}
+            headingColor={"heading.100"}
+          ></HighlightsCard>
+          <RecentProjectsCard></RecentProjectsCard>
+        </HStack>
       </GridItem>
       <GridItem area="footer" bg="primary.100">
         <CopyRightBanner></CopyRightBanner>
