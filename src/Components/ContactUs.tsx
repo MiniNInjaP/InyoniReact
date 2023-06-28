@@ -1,3 +1,5 @@
+import { useForm } from "react-hook-form";
+import styles from "../Styles/Button.module.css";
 import {
   Box,
   FormControl,
@@ -8,12 +10,14 @@ import {
   Heading,
   FormLabel,
   Textarea,
+  Button,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import iaSAIcon from "../assets/IA-SA-Icon-Small.jpg";
-import Button from "./Button";
 
 const ContactUs = () => {
+  const { handleSubmit, register } = useForm();
+
   return (
     <>
       <HStack
@@ -61,32 +65,43 @@ const ContactUs = () => {
           src={iaSAIcon}
         ></Image>
       </HStack>
-      <FormControl marginBottom={20} paddingX={{ base: 10, lg: 300 }}>
-        <FormLabel fontSize={30} color={"primary.100"} fontWeight={400}>
-          Contact Form
-        </FormLabel>
-        <HStack flexDirection={{ base: "column", lg: "row" }} paddingY={5}>
-          <Input
+      <form onSubmit={handleSubmit((data) => console.log(data))}>
+        <FormControl paddingX={{ base: 10, lg: 300 }}>
+          <FormLabel fontSize={30} color={"primary.100"} fontWeight={400}>
+            Contact Form
+          </FormLabel>
+          <HStack flexDirection={{ base: "column", lg: "row" }} paddingY={5}>
+            <Input
+              {...register("input")}
+              bg={"gray.200"}
+              focusBorderColor="primary.100"
+              placeholder="Name"
+            ></Input>
+            <Input
+              {...register("email")}
+              type="email"
+              bg={"gray.200"}
+              focusBorderColor="primary.100"
+              placeholder="Email Address"
+            ></Input>
+          </HStack>
+          <Textarea
+            {...register("message")}
             bg={"gray.200"}
             focusBorderColor="primary.100"
-            placeholder="Name"
-          ></Input>
-          <Input
-            bg={"gray.200"}
-            focusBorderColor="primary.100"
-            placeholder="Email Address"
-          ></Input>
-        </HStack>
-        <Textarea
-          bg={"gray.200"}
-          focusBorderColor="primary.100"
-          placeholder="Message"
-          height={"200px"}
-        ></Textarea>
-        <HStack width={"100%"} marginTop={2} justifyContent={"flex-end"}>
-          <Button variant="primary">Send</Button>
-        </HStack>
-      </FormControl>
+            placeholder="Message"
+            height={"200px"}
+          ></Textarea>
+          <HStack width={"100%"} marginTop={2} justifyContent={"flex-end"}>
+            <Button
+              type="submit"
+              className={[styles["btn"], styles["btn-primary"]].join(" ")}
+            >
+              Send
+            </Button>
+          </HStack>
+        </FormControl>
+      </form>
     </>
   );
 };

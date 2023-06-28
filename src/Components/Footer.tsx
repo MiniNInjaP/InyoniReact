@@ -1,3 +1,4 @@
+import { useForm } from "react-hook-form";
 import {
   Card,
   CardBody,
@@ -13,6 +14,7 @@ import { footerText } from "../TextInput/TextContent";
 import Button from "./Button";
 
 const Footer = () => {
+  const { register, handleSubmit } = useForm();
   return (
     <HStack
       flexDirection={{ base: "column", md: "row" }}
@@ -52,40 +54,45 @@ const Footer = () => {
           </Text>
         </CardBody>
       </Card>
-      <FormControl
-        width={{ base: 200, lg: 400 }}
-        color="black"
-        paddingTop={{ base: 0, md: 7 }}
-        paddingBottom={5}
-      >
-        <FormLabel fontSize={{ base: 12, md: 15, lg: 20 }} color={"white"}>
-          Get in Touch
-        </FormLabel>
-        <HStack>
-          <Input
-            borderRadius={0}
+      <form onSubmit={handleSubmit((data) => console.log(data))}>
+        <FormControl
+          width={{ base: 200, lg: 400 }}
+          color="black"
+          paddingTop={{ base: 0, md: 7 }}
+          paddingBottom={5}
+        >
+          <FormLabel fontSize={{ base: 12, md: 15, lg: 20 }} color={"white"}>
+            Get in Touch
+          </FormLabel>
+          <HStack>
+            <Input
+              {...register("name")}
+              borderRadius={0}
+              bgColor={"#FFF"}
+              type="text"
+              placeholder="Name"
+            ></Input>
+            <Input
+              {...register("email")}
+              borderRadius={0}
+              bgColor={"#FFF"}
+              type="email"
+              placeholder="Email Address"
+            ></Input>
+          </HStack>
+          <Textarea
+            {...register("message")}
             bgColor={"#FFF"}
-            type="text"
-            placeholder="Name"
-          ></Input>
-          <Input
+            height={150}
             borderRadius={0}
-            bgColor={"#FFF"}
-            type="email"
-            placeholder="Email Address"
-          ></Input>
-        </HStack>
-        <Textarea
-          bgColor={"#FFF"}
-          height={150}
-          borderRadius={0}
-          marginY={2}
-          placeholder="Message"
-        />
-        <HStack justifyContent={"flex-end"}>
-          <Button variant="secondary">Submit</Button>
-        </HStack>
-      </FormControl>
+            marginY={2}
+            placeholder="Message"
+          />
+          <HStack justifyContent={"flex-end"}>
+            <Button variant="secondary">Submit</Button>
+          </HStack>
+        </FormControl>
+      </form>
     </HStack>
   );
 };
