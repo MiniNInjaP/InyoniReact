@@ -54,18 +54,13 @@ const RecentProjectsCard = () => {
     },
   ];
   return (
-    <Card width={"50%"} boxShadow={0}>
-      <CardBody
-        justifyContent={"space-between"}
-        marginTop={"1%"}
-        paddingX={"6%"}
-      >
+    <Card width={{ base: "auto", lg: "50%" }} boxShadow={0}>
+      <CardBody justifyContent={"space-between"} marginTop={"1%"}>
         <Heading
           bg={"primary.100"}
           color="white"
-          width={"100%"}
           paddingY={1}
-          paddingLeft={{ base: 1, md: 5 }}
+          paddingX={10}
           fontSize={{ base: 20, md: 25 }}
         >
           Other Major Projects
@@ -73,10 +68,11 @@ const RecentProjectsCard = () => {
         {input.map((input) => (
           <HStack
             bg={input.id % 2 === 0 ? "gray.300" : "gray.100"}
-            width={"100%"}
             paddingBottom={{ base: 5, md: 2 }}
-            paddingX={{ base: 10, md: 0 }}
+            paddingX={5}
+            paddingY={1}
             flexDirection={{ base: "column", md: "row" }}
+            alignItems={"flex-start"}
           >
             <Heading fontSize={18} fontWeight={500}>
               {input.heading} -

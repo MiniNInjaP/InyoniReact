@@ -46,9 +46,9 @@ const Projects = () => {
           paragraphTwo={xinavaneText}
         ></ProjectCardLeft>
         <HStack
-          justifyContent={"center"}
           flexDirection={{ base: "column", lg: "row" }}
-          paddingX={10}
+          alignItems={{ base: "center", lg: "flex-start" }}
+          paddingX={{ base: 1, lg: 10 }}
           marginBottom={10}
         >
           <HighlightsCard
