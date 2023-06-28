@@ -1,12 +1,4 @@
-import {
-  Card,
-  Text,
-  CardBody,
-  Heading,
-  HStack,
-  Box,
-  Image,
-} from "@chakra-ui/react";
+import { Card, Text, CardBody, Heading, HStack } from "@chakra-ui/react";
 
 interface Props {
   textColor: string;
@@ -58,52 +50,45 @@ const HighlightsCard = ({ textColor, headingColor }: Props) => {
   ];
 
   return (
-    <Card boxShadow={0}>
+    <Card width={"50%"} boxShadow={0}>
       <CardBody
         justifyContent={"space-between"}
         marginTop={"1%"}
         paddingX={"6%"}
       >
-        <HStack
-          flexDirection={"column"}
-          alignItems={"flex-start"}
-          justifyContent={"space-between"}
-          spacing={"10%"}
+        <Heading
+          marginBottom={1}
+          marginLeft={20}
+          fontSize={{ base: 20, md: 25 }}
+          color={"primary.100"}
         >
-          <Heading
-            marginBottom={1}
-            paddingLeft={10}
-            fontSize={{ base: 20, md: 25 }}
-            color={"primary.100"}
+          Other Major Projects
+        </Heading>
+        <Text
+          marginBottom={{ base: 5, md: 2 }}
+          marginLeft={20}
+          color={"primary.100"}
+        >
+          Some of our other projects
+        </Text>
+        {input.map((input) => (
+          <HStack
+            paddingBottom={{ base: 5, md: 2 }}
+            paddingX={{ base: 10, md: 10 }}
+            flexDirection={{ base: "column", md: "row" }}
           >
-            Other Major Projects
-          </Heading>
-          <Text
-            marginBottom={{ base: 5, md: 2 }}
-            paddingLeft={10}
-            color={"primary.100"}
-          >
-            Some of our other projects
-          </Text>
-          {input.map((input) => (
-            <HStack
-              paddingBottom={{ base: 5, md: 2 }}
-              paddingX={{ base: 10, md: 0 }}
-              flexDirection={{ base: "column", md: "row" }}
+            <Heading fontSize={18} fontWeight={500} color={headingColor}>
+              {input.heading} -
+            </Heading>
+            <Text
+              fontSize={{ base: 15, lg: 17 }}
+              whiteSpace={"pre-wrap"}
+              color={textColor}
             >
-              <Heading fontSize={18} fontWeight={500} color={headingColor}>
-                {input.heading} -
-              </Heading>
-              <Text
-                fontSize={{ base: 15, lg: 17 }}
-                whiteSpace={"pre-wrap"}
-                color={textColor}
-              >
-                {input.text}
-              </Text>
-            </HStack>
-          ))}
-        </HStack>
+              {input.text}
+            </Text>
+          </HStack>
+        ))}
       </CardBody>
     </Card>
   );
