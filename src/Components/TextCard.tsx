@@ -16,6 +16,7 @@ interface Props {
   paragraphTwo?: string;
   textColor: string;
   headingColor: string;
+  showImage: boolean;
 }
 
 const TextCard = ({
@@ -26,6 +27,7 @@ const TextCard = ({
   headingOne,
   headingTwo,
   headingColor,
+  showImage,
 }: Props) => {
   return (
     <Card boxShadow={0}>
@@ -40,7 +42,7 @@ const TextCard = ({
           justifyContent={"space-between"}
           spacing={"10%"}
         >
-          <Box width={{ base: "auto", lg: "50vw" }} flexDirection={"column"}>
+          <Box flexDirection={"column"} marginBottom={{ base: 5, lg: 0 }}>
             <Heading
               fontSize={{ base: 20, md: 30, lg: 30 }}
               fontWeight={400}
@@ -57,7 +59,7 @@ const TextCard = ({
               {paragraphOne}
             </Text>
           </Box>
-          <Box width={{ base: "auto", lg: "50vw" }}>
+          <Box>
             <Heading
               fontSize={{ base: 20, md: 30, lg: 30 }}
               fontWeight={400}
@@ -73,11 +75,14 @@ const TextCard = ({
             >
               {paragraphTwo}
             </Text>
-            <Image
-              src={image}
-              width={{ base: "100px", lg: "500px" }}
-              marginRight={"200px"}
-            ></Image>
+
+            {showImage && (
+              <Image
+                src={image}
+                width={{ base: "200px", md: "400px", lg: "500px" }}
+                marginRight={"200px"}
+              ></Image>
+            )}
           </Box>
         </HStack>
       </CardBody>

@@ -19,6 +19,48 @@ import HighlightsCard from "../Components/HighlightsCard";
 import RecentProjectsCard from "../Components/RecentProjectsCard";
 
 const Projects = () => {
+  const input = [
+    {
+      heading: "Gurue, Mozambique",
+      text: "430 ha - Micro, Overhead Sprinklers and Center Pivots",
+    },
+    {
+      heading: "Ghana ",
+      text: "13 ha - Pivots, Drip, Overhead Sprinklers and Flood",
+    },
+    {
+      heading: "Xinavane Sugar, Mozambique",
+      text: "4380 ha – Semisolid Set Development",
+    },
+    {
+      heading: "Royal Swaziland Sugar",
+      text: " – 12,000 ha Sub Surface Drip Developments",
+    },
+    {
+      heading: "Nchalo Sugar, Malawi ",
+      text: "Center Pivot Developments",
+    },
+    {
+      heading: "MozPEL, Mozambique",
+      text: "Center Pivot Development",
+    },
+    {
+      heading: "Xinavane Sugar, Mozambique ",
+      text: "Floppy Conversion Projects",
+    },
+    {
+      heading: "Markala Sugar, Mali",
+      text: "Center Pivot Development",
+    },
+    {
+      heading: "LUSIP, Swaziland ",
+      text: " Small Farmer Irrigation Development",
+    },
+    {
+      heading: "Dwanga Sugar, Malawi ",
+      text: "Center Pivot Development",
+    },
+  ];
   return (
     <Grid templateAreas={`"nav" "main" "footer"`}>
       <GridItem area="nav">
@@ -47,11 +89,15 @@ const Projects = () => {
         ></ProjectCardLeft>
         <HStack
           flexDirection={{ base: "column", lg: "row" }}
+          justifyContent={"space-between"}
           alignItems={{ base: "center", lg: "flex-start" }}
           paddingX={{ base: 1, lg: 10 }}
           marginBottom={10}
         >
           <HighlightsCard
+            input={input}
+            header="Other Major Projects"
+            intro="Some of out other Projects"
             textColor={"secondary.100"}
             headingColor={"heading.100"}
           ></HighlightsCard>

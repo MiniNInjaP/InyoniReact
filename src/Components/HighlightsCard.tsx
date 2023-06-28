@@ -1,56 +1,27 @@
 import { Card, Text, CardBody, Heading, HStack } from "@chakra-ui/react";
 
+interface Content {
+  heading: string;
+  text: string;
+}
+
 interface Props {
   textColor: string;
   headingColor: string;
+  intro: string;
+  header: string;
+  input: Content[];
 }
 
-const HighlightsCard = ({ textColor, headingColor }: Props) => {
-  const input = [
-    {
-      heading: "Gurue, Mozambique",
-      text: "430 ha - Micro, Overhead Sprinklers and Center Pivots",
-    },
-    {
-      heading: "Ghana ",
-      text: "13 ha - Pivots, Drip, Overhead Sprinklers and Flood",
-    },
-    {
-      heading: "Xinavane Sugar, Mozambique",
-      text: "4380 ha – Semisolid Set Development",
-    },
-    {
-      heading: "Royal Swaziland Sugar",
-      text: " – 12,000 ha Sub Surface Drip Developments",
-    },
-    {
-      heading: "Nchalo Sugar, Malawi ",
-      text: "Center Pivot Developments",
-    },
-    {
-      heading: "MozPEL, Mozambique",
-      text: "Center Pivot Development",
-    },
-    {
-      heading: "Xinavane Sugar, Mozambique ",
-      text: "Floppy Conversion Projects",
-    },
-    {
-      heading: "Markala Sugar, Mali",
-      text: "Center Pivot Development",
-    },
-    {
-      heading: "LUSIP, Swaziland ",
-      text: " Small Farmer Irrigation Development",
-    },
-    {
-      heading: "Dwanga Sugar, Malawi ",
-      text: "Center Pivot Development",
-    },
-  ];
-
+const HighlightsCard = ({
+  input,
+  intro,
+  header,
+  textColor,
+  headingColor,
+}: Props) => {
   return (
-    <Card width={{ base: "auto", lg: "50%" }} boxShadow={0}>
+    <Card boxShadow={0}>
       <CardBody
         justifyContent={"space-between"}
         marginTop={"1%"}
@@ -62,14 +33,14 @@ const HighlightsCard = ({ textColor, headingColor }: Props) => {
           fontSize={{ base: 20, md: 25 }}
           color={"primary.100"}
         >
-          Other Major Projects
+          {header}
         </Heading>
         <Text
           marginBottom={{ base: 5, md: 2 }}
           marginLeft={{ base: 0, lg: 20 }}
           color={"primary.100"}
         >
-          Some of our other projects
+          {intro}
         </Text>
         {input.map((input) => (
           <HStack
