@@ -35,10 +35,12 @@ const NavigationList = ({ pageId }: Props) => {
       <Show below="lg">
         <Menu>
           <MenuButton
+            fontSize={20}
+            marginRight={5}
             color={"black"}
             as={Button}
             variant={"unstyled"}
-            leftIcon={<FaBars />}
+            leftIcon={<FaBars class="" color={"#17733A"} />}
           ></MenuButton>
           <MenuList
             color={"secondary.100"}
@@ -82,6 +84,7 @@ const NavigationList = ({ pageId }: Props) => {
               <MenuItem
                 as={Link}
                 to={"https://www.valleyirrigation.com/agsense"}
+                paddingLeft={20}
               >
                 Agsense Icon Link
               </MenuItem>
@@ -93,13 +96,16 @@ const NavigationList = ({ pageId }: Props) => {
                 Netafim
               </MenuItem>
             </Menu>
+            <MenuItem as={Link} to={"/contact"}>
+              Contact Us
+            </MenuItem>
           </MenuList>
         </Menu>
       </Show>
       <Show above="lg">
         <List
           color={"secondary.100"}
-          fontSize={{ lg: 13, xl: 20 }}
+          fontSize={{ lg: 13, xl: 16, "2xl": 25 }}
           paddingTop={2}
           display="flex"
           flex="d-flex"
@@ -143,10 +149,11 @@ const NavigationList = ({ pageId }: Props) => {
                 transition={"all 0.3s"}
                 as={Button}
                 variant="unstyled"
-                marginTop={{ lg: "22px", xl: "27px" }}
+                marginTop={{ lg: "22px", xl: "25px", "2xl": "32px" }}
                 onMouseEnter={mainMenu.onOpen}
                 borderRadius={0}
-                fontSize={{ lg: 13, xl: 20 }}
+                marginX={2}
+                fontSize={{ lg: 13, xl: 16, "2xl": 25 }}
                 rightIcon={
                   <Icon position={"relative"} top={1}>
                     <ChevronDownIcon />
@@ -217,6 +224,7 @@ const NavigationList = ({ pageId }: Props) => {
             </MenuList>
           </Menu>
           <ListItem
+            fontSize={{ lg: 13, xl: 16, "2xl": 25 }}
             color={pageId === 7 ? "primary.100" : "secondary.100"}
             fontWeight={pageId === 7 ? "600" : "normal"}
             _hover={{ transform: "scale(1.2)", color: "primary.100" }}
