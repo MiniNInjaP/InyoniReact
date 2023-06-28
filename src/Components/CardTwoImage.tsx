@@ -62,7 +62,7 @@ const CardTwoImage = ({
           {heading}
         </Heading>
         <Text
-          fontSize={{ base: 8, md: 15, lg: 17 }}
+          fontSize={{ base: 15, md: 15, lg: 17 }}
           whiteSpace={"pre-wrap"}
           color={textColor}
         >
@@ -77,13 +77,13 @@ const CardTwoImage = ({
       <HStack
         paddingLeft={{ base: 3, md: 0 }}
         paddingRight={{ base: 3 }}
+        spacing={{ base: 5, md: "150px", lg: 0 }}
         flexDirection={{ base: "column", md: "row" }}
         justifyContent={"space-evenly"}
       >
         <Image
           boxShadow={"0 0 5px black"}
-          paddingX={5}
-          marginRight={10}
+          marginX={5}
           borderRadius={"5px"}
           overflow={"hidden"}
           width={"280px"}
