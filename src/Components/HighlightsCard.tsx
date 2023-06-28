@@ -50,15 +50,15 @@ const HighlightsCard = ({ textColor, headingColor }: Props) => {
   ];
 
   return (
-    <Card width={"50%"} boxShadow={0}>
+    <Card width={{ base: "auto", lg: "50%" }} boxShadow={0}>
       <CardBody
         justifyContent={"space-between"}
         marginTop={"1%"}
-        paddingX={"6%"}
+        paddingX={{ base: "15%", md: "0%" }}
       >
         <Heading
           marginBottom={1}
-          marginLeft={20}
+          marginLeft={{ base: 0, lg: 20 }}
           fontSize={{ base: 20, md: 25 }}
           color={"primary.100"}
         >
@@ -66,7 +66,7 @@ const HighlightsCard = ({ textColor, headingColor }: Props) => {
         </Heading>
         <Text
           marginBottom={{ base: 5, md: 2 }}
-          marginLeft={20}
+          marginLeft={{ base: 0, lg: 20 }}
           color={"primary.100"}
         >
           Some of our other projects
@@ -74,8 +74,9 @@ const HighlightsCard = ({ textColor, headingColor }: Props) => {
         {input.map((input) => (
           <HStack
             paddingBottom={{ base: 5, md: 2 }}
-            paddingX={{ base: 10, md: 10 }}
             flexDirection={{ base: "column", md: "row" }}
+            justifyContent={{ base: "center", md: "flex-start" }}
+            alignItems={{ base: "flex-start", lg: "center" }}
           >
             <Heading fontSize={18} fontWeight={500} color={headingColor}>
               {input.heading} -

@@ -45,7 +45,12 @@ const Projects = () => {
           headingTwo={Xinavane}
           paragraphTwo={xinavaneText}
         ></ProjectCardLeft>
-        <HStack>
+        <HStack
+          justifyContent={"center"}
+          flexDirection={{ base: "column", lg: "row" }}
+          paddingX={10}
+          marginBottom={10}
+        >
           <HighlightsCard
             textColor={"secondary.100"}
             headingColor={"heading.100"}
