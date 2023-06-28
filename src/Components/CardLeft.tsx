@@ -34,7 +34,7 @@ const CardLeft = ({
       <Image
         borderRadius={"5px"}
         overflow={"hidden"}
-        width={{ base: "200px", md: "550px" }}
+        width={{ base: "200px", md: "450px" }}
         height={{ base: "200px", md: "400px" }}
         src={image}
         paddingBottom={10}

@@ -49,7 +49,6 @@ const CardTwoImage = ({
     >
       <CardBody
         marginTop={0}
-        flexWrap={"wrap"}
         paddingY={10}
         paddingLeft={{ base: 10, md: 20, lg: 0 }}
         paddingRight={{ base: 10, md: 20, lg: "10%" }}
