@@ -28,6 +28,7 @@ const CardRight = ({
       bg={"white"}
       paddingY={50}
       paddingLeft={{ base: 0, md: 10 }}
+      marginX={10}
       justifyContent={{ base: "center", lg: "space-between" }}
       alignItems={{ base: "center", lg: "flex-start" }}
       flexDir={{ base: "column", lg: "row" }}
@@ -39,7 +40,8 @@ const CardRight = ({
         marginRight={"10%"}
       >
         <Heading
-          fontSize={{ base: 12, md: 20, lg: 30 }}
+          marginLeft={5}
+          fontSize={{ base: 18, md: 20, lg: 30 }}
           fontWeight={400}
           color={headingColor}
           marginBottom={3}
@@ -47,7 +49,7 @@ const CardRight = ({
           {heading}
         </Heading>
         <Text
-          fontSize={{ base: 8, md: 15, lg: 17 }}
+          fontSize={{ base: 15, lg: 17 }}
           whiteSpace={"pre-wrap"}
           color={textColor}
         >

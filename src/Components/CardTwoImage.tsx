@@ -48,13 +48,13 @@ const CardTwoImage = ({
       flexDir={{ base: "column", lg: "row" }}
     >
       <CardBody
-        marginTop={0}
         paddingY={10}
         paddingLeft={{ base: 10, md: 20, lg: 0 }}
         paddingRight={{ base: 10, md: 20, lg: "10%" }}
       >
         <Heading
-          fontSize={{ base: 12, md: 20, lg: 30 }}
+          marginLeft={5}
+          fontSize={{ base: 18, md: 20, lg: 30 }}
           fontWeight={400}
           color={headingColor}
           marginBottom={3}
@@ -62,7 +62,7 @@ const CardTwoImage = ({
           {heading}
         </Heading>
         <Text
-          fontSize={{ base: 15, md: 15, lg: 17 }}
+          fontSize={{ base: 15, lg: 17 }}
           whiteSpace={"pre-wrap"}
           color={textColor}
         >
