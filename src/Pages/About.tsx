@@ -31,6 +31,7 @@ const About = () => {
           headerOne="About"
         ></Header>
         <TextCard
+          showImage={false}
           headingOne={TurnKey}
           paragraphOne={TurnKeySection}
           paragraphTwo={philosophyText}
