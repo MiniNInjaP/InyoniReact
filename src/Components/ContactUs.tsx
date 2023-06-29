@@ -70,7 +70,7 @@ const ContactUs = () => {
         ></Image>
       </HStack>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <FormControl paddingX={{ base: 10, lg: 300 }}>
+        <FormControl marginBottom={10} paddingX={{ base: 10, lg: 300 }}>
           <FormLabel fontSize={30} color={"primary.100"} fontWeight={400}>
             Contact Form
           </FormLabel>
