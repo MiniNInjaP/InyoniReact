@@ -30,7 +30,7 @@ const TextCard = ({
           alignItems={"flex-start"}
         >
           <HStack
-            width={{ base: "auto", lg: paragraphTwo ? "50%" : "auto" }}
+            width={{ base: "auto", lg: paragraphTwo && "50%" }}
             flexDirection={"column"}
             alignItems={"flex-start"}
             marginBottom={{ base: 5, lg: 0 }}
@@ -53,7 +53,7 @@ const TextCard = ({
               {paragraphOne}
             </Text>
           </HStack>
-          {paragraphTwo && (
+          {(paragraphTwo || showImage) && (
             <HStack
               width={{ base: "auto", lg: "50%" }}
               flexDirection={"column"}
@@ -81,7 +81,7 @@ const TextCard = ({
               {showImage && (
                 <Image
                   src={image}
-                  width={{ base: "200px", md: "400px", lg: "500px" }}
+                  width={{ base: "200px", md: "400px", lg: "600px" }}
                   marginRight={"200px"}
                 ></Image>
               )}
