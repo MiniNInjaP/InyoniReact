@@ -1,12 +1,4 @@
-import {
-  Card,
-  Text,
-  CardBody,
-  Heading,
-  HStack,
-  Box,
-  Image,
-} from "@chakra-ui/react";
+import { Card, Text, CardBody, Heading, HStack, Image } from "@chakra-ui/react";
 
 interface Props {
   image?: string;
@@ -31,26 +23,28 @@ const TextCard = ({
 }: Props) => {
   return (
     <Card boxShadow={0}>
-      <CardBody
-        justifyContent={"space-between"}
-        marginTop={"1%"}
-        paddingX={"6%"}
-      >
+      <CardBody marginTop={"1%"} paddingX={"6%"}>
         <HStack
+          spacing={"11%"}
           flexDirection={{ base: "column", lg: "row" }}
           alignItems={"flex-start"}
-          justifyContent={"space-between"}
-          spacing={"10%"}
         >
-          <Box flexDirection={"column"} marginBottom={{ base: 5, lg: 0 }}>
-            <Heading
-              fontSize={{ base: 20, md: 30, lg: 30 }}
-              fontWeight={400}
-              color={headingColor}
-              marginBottom={5}
-            >
-              {headingOne}
-            </Heading>
+          <HStack
+            width={{ base: "auto", lg: "50%" }}
+            flexDirection={"column"}
+            alignItems={"flex-start"}
+            marginBottom={{ base: 5, lg: 0 }}
+          >
+            {headingOne && (
+              <Heading
+                fontSize={{ base: 20, md: 30, lg: 30 }}
+                fontWeight={400}
+                color={headingColor}
+                marginBottom={5}
+              >
+                {headingOne}
+              </Heading>
+            )}
             <Text
               fontSize={{ base: 15, md: 15, lg: 17 }}
               whiteSpace={"pre-wrap"}
@@ -58,24 +52,31 @@ const TextCard = ({
             >
               {paragraphOne}
             </Text>
-          </Box>
-          <Box>
-            <Heading
-              fontSize={{ base: 20, md: 30, lg: 30 }}
-              fontWeight={400}
-              color={headingColor}
-              marginBottom={3}
-            >
-              {headingTwo}
-            </Heading>
+          </HStack>
+          <HStack
+            width={{ base: "auto", lg: "50%" }}
+            flexDirection={"column"}
+            alignItems={"flex-start"}
+            marginBottom={{ base: 5, lg: 0 }}
+          >
+            {headingTwo && (
+              <Heading
+                fontSize={{ base: 20, md: 30, lg: 30 }}
+                fontWeight={400}
+                color={headingColor}
+                marginBottom={3}
+              >
+                {headingTwo}
+              </Heading>
+            )}
             <Text
+              bg={"gray.100"}
               fontSize={{ base: 15, md: 15, lg: 17 }}
               whiteSpace={"pre-wrap"}
               color={textColor}
             >
               {paragraphTwo}
             </Text>
-
             {showImage && (
               <Image
                 src={image}
@@ -83,7 +84,7 @@ const TextCard = ({
                 marginRight={"200px"}
               ></Image>
             )}
-          </Box>
+          </HStack>
         </HStack>
       </CardBody>
     </Card>
