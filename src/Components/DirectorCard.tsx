@@ -26,7 +26,7 @@ const DirectorCard = ({
   headingColor,
 }: Props) => {
   return (
-    <Card>
+    <Card boxShadow={0}>
       <CardBody paddingX={"6%"} paddingTop={0}>
         <HStack
           flexDirection={{ base: "column", lg: "row" }}
