@@ -13,6 +13,7 @@ import {
 } from "../TextInput/TextContent";
 import Footer from "../Components/Footer";
 import DirectorCard from "../Components/DirectorCard";
+import CopyRightBanner from "../Components/CopyRightBanner";
 
 const About = () => {
   return (
@@ -52,6 +53,7 @@ const About = () => {
       </GridItem>
       <GridItem area="footer" bg={"primary.100"}>
         <Footer></Footer>
+        <CopyRightBanner></CopyRightBanner>
       </GridItem>
     </Grid>
   );

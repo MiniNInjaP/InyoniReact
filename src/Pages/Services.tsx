@@ -7,6 +7,7 @@ import Header from "../Components/Header";
 import { ourFocusText, embracingText } from "../TextInput/TextContent";
 import valleyPivot from "../assets/ValleyCenterPivotSwaziland.jpg";
 import HighlightsCard from "../Components/HighlightsCard";
+import CopyRightBanner from "../Components/CopyRightBanner";
 
 const Services = () => {
   const input = [
@@ -64,8 +65,9 @@ const Services = () => {
           ></TextCard>
         </Grid>
       </GridItem>
-      <GridItem area="footer" bg="#17733A">
+      <GridItem area="footer" bg="primary.100">
         <Footer></Footer>
+        <CopyRightBanner></CopyRightBanner>
       </GridItem>
     </Grid>
   );
