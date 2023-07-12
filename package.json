@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "nodemon server.js"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
@@ -19,6 +20,9 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "framer-motion": "^10.12.16",
     "install": "^0.13.0",
+    "msnodesqlv8": "^4.1.0",
+    "mssql": "^9.1.1",
+    "nodemon": "^2.0.22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.1",
