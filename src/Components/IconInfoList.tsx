@@ -36,6 +36,9 @@ const IconInfoList = () => (
           leftIcon={<Icon as={FaFacebookF} color="primary.100" />}
         ></Button>
       </Link>
+      <Link target="_blank" href="https://github.com/MiniNInjaP/InyoniReact">
+        <Text>GitHub Repository</Text>
+      </Link>
     </Show>
   </HStack>
 );
