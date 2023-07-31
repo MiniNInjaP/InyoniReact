@@ -1,5 +1,5 @@
 import { Button, HStack, Icon, Link, Show, Text } from "@chakra-ui/react";
-import { FaFacebookF, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaFacebookF, FaPhone, FaEnvelope, FaGithub } from "react-icons/fa";
 
 const IconInfoList = () => (
   <HStack
@@ -33,11 +33,22 @@ const IconInfoList = () => (
           paddingLeft={2}
           fontSize={{ base: 14, md: 14 }}
           variant="unstyled"
+          color="primary.100"
           leftIcon={<Icon as={FaFacebookF} color="primary.100" />}
         ></Button>
       </Link>
       <Link target="_blank" href="https://github.com/MiniNInjaP/InyoniReact">
-        <Text>GitHub Repository</Text>
+        <Button
+          style={{ height: "20px" }}
+          as="a"
+          paddingLeft={2}
+          fontSize={{ base: 14, md: 12 }}
+          variant="unstyled"
+          color="primary.100"
+          leftIcon={<Icon as={FaGithub} color="primary.100" />}
+        >
+          GitHub Repository
+        </Button>
       </Link>
     </Show>
   </HStack>
