@@ -1,6 +1,5 @@
 import { FieldValues, useForm } from "react-hook-form";
 import styles from "../Styles/Button.module.css";
-import {saveAs} from 'file-saver'
 import {
   Box,
   FormControl,
@@ -15,14 +14,21 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import iaSAIcon from "../assets/IA-SA-Icon-Small.jpg";
+import { SetStateAction, useState } from "react";
 
+ 
+interface UserData {
+  name: string;
+  message: string;
+  email: string;
+
+}
 const ContactUs = () => {
   const { handleSubmit, register, reset } = useForm();
-
+  const [userMessage, setUserMessage] = useState<UserData | null>();
+  
   const onSubmit = (data: FieldValues) => {
-    const file = new Blob(data.message, {type='text/plain;charset=utf-8'});
-    saveAs(file, data.name)
-
+    console.log(data.name)
     reset();
   };
   return (
