@@ -14,18 +14,16 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import iaSAIcon from "../assets/IA-SA-Icon-Small.jpg";
-import { SetStateAction, useState } from "react";
 
  
-interface UserData {
-  name: string;
-  message: string;
-  email: string;
+// interface UserData {
+//   name: string;
+//   message: string;
+//   email: string;
 
-}
+// }
 const ContactUs = () => {
   const { handleSubmit, register, reset } = useForm();
-  const [userMessage, setUserMessage] = useState<UserData | null>();
   
   const onSubmit = (data: FieldValues) => {
     console.log(data.name)
