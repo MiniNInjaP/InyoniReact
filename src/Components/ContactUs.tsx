@@ -26,7 +26,7 @@ const ContactUs = () => {
   const { handleSubmit, register, reset } = useForm();
   
   const onSubmit = (data: FieldValues) => {
-    console.log(data.name)
+
     reset();
   };
   return (
