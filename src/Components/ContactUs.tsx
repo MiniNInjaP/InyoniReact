@@ -1,5 +1,6 @@
 import { FieldValues, useForm } from "react-hook-form";
 import styles from "../Styles/Button.module.css";
+import {saveAs} from 'file-saver'
 import {
   Box,
   FormControl,
@@ -19,7 +20,9 @@ const ContactUs = () => {
   const { handleSubmit, register, reset } = useForm();
 
   const onSubmit = (data: FieldValues) => {
-    console.log(data);
+    const file = new Blob(data.message, {type='text/plain;charset=utf-8'});
+    saveAs(file, data.name)
+
     reset();
   };
   return (
